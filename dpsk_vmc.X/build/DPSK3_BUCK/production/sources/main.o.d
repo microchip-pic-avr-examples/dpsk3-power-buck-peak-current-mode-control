@@ -1,0 +1,22 @@
+build/DPSK3_BUCK/production/sources/main.o:  \
+sources/main.c  \
+ sources/config/apps.h  \
+sources/fault_handler/app_fault_monitor.h  \
+ sources/fault_handler/drivers/drv_fault_handler.h  \
+ sources/pwr_control/app_power_control.h  \
+ sources/pwr_control/devices/dev_buck_typedef.h  \
+ sources/pwr_control/drivers/npnz16b.h  \
+sources/config/hal.h  \
+ sources/config/dpsk3_hwdescr.h  \
+sources/config/dpsk3_devcfg.h  \
+ sources/config/init/init_fosc.h  \
+sources/config/init/init_dsp.h  \
+ sources/config/init/init_timer1.h  \
+sources/config/init/init_gpio.h  \
+ sources/led/app_led.h  \
+sources/lcd/app_lcd.h  \
+ sources/lcd/devices/dev_lcd.h  \
+sources/lcd/drivers/drv_lcd_interface.h  \
+ sources/switch/app_switch.h  \
+sources/switch/drivers/drv_switch.h  \
+ sources/config/hal.h 

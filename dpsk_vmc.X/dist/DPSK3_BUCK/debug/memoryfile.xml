@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/DPSK3_BUCK/debug/dpsk_vmc.X.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>24576</length>
+      <used>1428</used>
+      <free>23148</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>269184</length>
+      <used>31812</used>
+      <free>237372</free>
+    </memory>
+  </executable>
+</project>
