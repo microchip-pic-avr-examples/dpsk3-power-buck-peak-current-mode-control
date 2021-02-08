@@ -272,8 +272,8 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                       0x12b0                   0            0x4a  (74)
 .ndata                      0x12fa                   0            0x7c  (124)
 .nbss                       0x1376                   0            0x16  (22)
-_0000000007894C8060215bb0    0x138c                   0            0x16  (22)
-_000000000779328060215bb4    0x13a2                   0            0x14  (20)
+_0000000007F84C8060215e23    0x138c                   0            0x16  (22)
+_0000000007E6128060215e26    0x13a2                   0            0x14  (20)
 .ndata                      0x13b6                   0            0x1c  (28)
 .nbss                       0x13d2                   0             0xe  (14)
 .ndata                      0x13e0                   0             0xc  (12)
@@ -5315,15 +5315,15 @@ __c30_signature
                     0x1376                  _dacModuleConfigClear
                     0x137e                  _dacConfigClear
 
-_0000000007894C8060215bb0
+_0000000007F84C8060215e23
                     0x138c         0x16
- _0000000007894C8060215bb0
+ _0000000007F84C8060215e23
                     0x138c         0x16 build/DPSK3_BUCK/production/sources/fault_handler/drivers/fdrv_TrapHandler.o
                     0x138c                  _traplog
 
-_000000000779328060215bb4
+_0000000007E6128060215e26
                     0x13a2         0x14
- _000000000779328060215bb4
+ _0000000007E6128060215e26
                     0x13a2         0x14 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
                     0x13a2                  _v_loop_coefficients
 
