@@ -163,7 +163,7 @@ volatile uint16_t appPowerSupply_ConverterObjectInitialize(void)
     buck.state_id.value = BUCK_OPSTATE_INITIALIZE; // Reset Buck State Machine
     
     // Set Reference values
-    buck.set_values.control_mode = BUCK_CONTROL_MODE_VMC; // Set Control Mode
+    buck.set_values.control_mode = BUCK_CONTROL_MODE_PCMC;//BUCK_CONTROL_MODE_VMC; // Set Control Mode
     buck.set_values.no_of_phases = BUCK_NO_OF_PHASES; // Set number of power train phases
     buck.set_values.i_ref = BUCK_ISNS_REF; // Set current loop reference
     buck.set_values.v_ref = BUCK_VOUT_REF; // Set voltage loop reference

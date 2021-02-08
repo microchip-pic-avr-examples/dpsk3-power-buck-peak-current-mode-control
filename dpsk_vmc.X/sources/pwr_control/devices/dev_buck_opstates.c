@@ -68,7 +68,7 @@ volatile uint16_t State_Initialize(volatile struct BUCK_POWER_CONTROLLER_s *buck
     buckInstance->status.bits.adc_active = false;
 
     // Initiate current sensor calibration flag bit
-    if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_VMC)
+    if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC) // FROM VCMC CHANGE TO PCMC
         buckInstance->status.bits.cs_calib_complete = true; 
     else if (buckInstance->status.bits.cs_calib_enable)
         buckInstance->status.bits.cs_calib_complete = false; 
@@ -253,6 +253,9 @@ volatile uint16_t State_RampUp(volatile struct BUCK_POWER_CONTROLLER_s *buckInst
                   // this sub-state in its current configuration and step over it if not
 
                     if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_VMC)
+                        buckInstance->state_id.bits.substate_id++; // Increment sub-state pointer
+                    
+                    else if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC) //ADDED
                         buckInstance->state_id.bits.substate_id++; // Increment sub-state pointer
                         
                 }

@@ -255,12 +255,12 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x20ca          0x312f  (12591)
 .const                      0x22ca                0xd8           0x144  (324)
-.text                       0x23a2              0x1cc6          0x2b29  (11049)
-.dinit                      0x4068               0x286           0x3c9  (969)
-.text                       0x42ee              0x11dc          0x1aca  (6858)
-.init.delay32               0x54ca                0x1c            0x2a  (42)
+.text                       0x23a2              0x1d00          0x2b80  (11136)
+.dinit                      0x40a2               0x286           0x3c9  (969)
+.text                       0x4328              0x11e2          0x1ad3  (6867)
+.init.delay32               0x550a                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x7c59  (31833) 11%
+                 Total "program" memory used (bytes):         0x7cb9  (31929) 11%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x6000]
@@ -272,8 +272,8 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                       0x12b0                   0            0x4a  (74)
 .ndata                      0x12fa                   0            0x7c  (124)
 .nbss                       0x1376                   0            0x16  (22)
-_0000000007860C80601774df    0x138c                   0            0x16  (22)
-_0000000007E61280601774e3    0x13a2                   0            0x14  (20)
+_0000000007894C8060215bb0    0x138c                   0            0x16  (22)
+_000000000779328060215bb4    0x13a2                   0            0x14  (20)
 .ndata                      0x13b6                   0            0x1c  (28)
 .nbss                       0x13d2                   0             0xe  (14)
 .ndata                      0x13e0                   0             0xc  (12)
@@ -549,134 +549,134 @@ External Symbols in Program Memory (by address):
                   0x00363e                  _SubState_IRampUp
                   0x0036ae                  _SubState_PowerGoodDelay
                   0x0036ec                  _SubState_VRampUp
-                  0x003786                  _SubState_PrepareVRampUp
-                  0x0039fa                  _p33c_PwmModule_GetHandle
-                  0x0039fe                  _p33c_PwmModule_ConfigRead
-                  0x003a08                  _p33c_PwmModule_ConfigWrite
-                  0x003a1e                  _p33c_PwmModule_Dispose
-                  0x003a42                  _p33c_PwmModule_Initialize
-                  0x003a66                  _p33c_PwmGenerator_ConfigRead
-                  0x003a84                  _p33c_PwmGenerator_ConfigWrite
-                  0x003aaa                  _p33c_PwmGenerator_Dispose
-                  0x003ad0                  _p33c_PwmGenerator_Enable
-                  0x003b38                  _p33c_PwmGenerator_Disable
-                  0x003b62                  _p33c_PwmGenerator_Resume
-                  0x003b7a                  _p33c_PwmGenerator_Suspend
-                  0x003b92                  _p33c_PwmGenerator_SetPeriod
-                  0x003bac                  _p33c_PwmGenerator_SetDutyCycle
-                  0x003bc6                  _p33c_PwmGenerator_SetDeadTimes
-                  0x003bee                  _p33c_PwmGenerator_GetHandle
-                  0x003c04                  _p33c_PwmGenerator_Initialize
-                  0x003c4c                  _p33c_PwmGenerator_GetInstance
-                  0x003c78                  _p33c_PwmGenerator_GetGroup
-                  0x003cb4                  _p33c_PwmGenerator_SyncGenerators
-                  0x003d84                  _drv_BuckConverter_Initialize
-                  0x003e56                  _drv_BuckConverter_Execute
-                  0x003f54                  _drv_BuckConverter_Start
-                  0x003fdc                  _drv_BuckConverter_Stop
-                  0x00403c                  _drv_BuckConverter_Suspend
-                  0x004052                  _drv_BuckConverter_Resume
-                  0x0042ee                  _appLCD_Initialize
-                  0x00431a                  _appLCD_Execute
-                  0x00455c                  _appLCD_Dispose
-                  0x004568                  _State_Initialize
-                  0x0045c8                  _State_Standby
-                  0x0045f8                  _State_RampUp
-                  0x00466e                  _State_Online
-                  0x0046ba                  _State_Error
-                  0x0046e4                  _State_Reset
-                  0x0047a0                  _appFaultMonitor_Initialize
-                  0x004870                  _appFaultMonitor_Dispose
-                  0x00488c                  _appFaultMonitor_Execute
-                  0x0048da                  _uvlo_FaultInitialize
-                  0x004920                  _ovlo_FaultInitialize
-                  0x004966                  _regerr_FaultInitialize
-                  0x0049ae                  _Fosc_Initialize
-                  0x004aac                  _Aclk_Initialize
-                  0x004b10                  _drv_FaultCheck
-                  0x004c70                  _v_loop_Initialize
-                  0x004dae                  _v_loop_Update
-                  0x004e3a                  _v_loop_Reset
-                  0x004e52                  _v_loop_Precharge
-                  0x004e72                  _v_loop_PTermUpdate
-                  0x004ec2                  _Dev_Lcd_Init
-                  0x004f00                  _Dev_Lcd_Clear
-                  0x004f0c                  _Dev_Lcd_GotoXY
-                  0x004f30                  _Dev_Lcd_WriteChar
-                  0x004fa0                  _Dev_Lcd_WriteString
-                  0x004fb6                  _Dev_Lcd_WriteStringXY
-                  0x004fc4                  _drv_Switch_Initialize
-                  0x004fe2                  _drv_Switch_Execute
-                  0x0050a2                  _drv_Switch_Dispose
-                  0x0050bc                  _p33c_DacModule__GetHandle
-                  0x0050c0                  _p33c_DacModule_ConfigRead
-                  0x0050ca                  _p33c_DacModule_ConfigWrite
-                  0x0050e6                  _p33c_DacModule_Dispose
-                  0x0050fe                  _p33c_DacInstance__GetHandle
-                  0x005114                  _p33c_DacInstance_ConfigRead
-                  0x005132                  _p33c_DacInstance_ConfigWrite
-                  0x005164                  _p33c_DacInstance_Dispose
-                  0x005186                  _main
-                  0x005216                  _p33c_GpioInstance_GetHandle
-                  0x00522a                  _p33c_GpioInstance_ConfigRead
-                  0x005246                  _p33c_GpioInstance_ConfigWrite
-                  0x00526a                  _p33c_GpioInstance_Dispose
-                  0x005290                  _Drv_Lcd_Interface_Init
-                  0x0052a6                  _Drv_Lcd_Interface_Spi_Send
-                  0x0052e8                  _Drv_Lcd_Interface_Reset
-                  0x0052f4                  _Drv_Lcd_Interface_SendCmd
-                  0x0052fc                  _Drv_Lcd_Interface_SendChar
-                  0x005304                  _appSwitch_EventButtonLongPress
-                  0x005312                  _appSwitch_EventButtonUp
-                  0x005316                  _appSwitch_EventButtonDown
-                  0x00531c                  _appSwitch_Initialize
-                  0x00534a                  _appSwitch_Execute
-                  0x005360                  _appSwitch_Dispose
-                  0x005376                  _appLED_Initialize
-                  0x00538e                  _appLED_Execute
-                  0x0053ba                  _appLED_Dispose
-                  0x0053cc                  _Dsp_Initialize
-                  0x00541a                  _drv_TrapHandler_SoftTrapsInitialize
-                  0x005442                  _DefaultTrapHandler
-                  0x005454                  _Dsp_SetConfig
-                  0x005474                  _Dsp_GetConfig
-                  0x005482                  _Timer1_Initialize
-                  0x0054ac                  _Gpio_Initialize
-                  0x0054ca                  ___delay32
+                  0x0037c0                  _SubState_PrepareVRampUp
+                  0x003a34                  _p33c_PwmModule_GetHandle
+                  0x003a38                  _p33c_PwmModule_ConfigRead
+                  0x003a42                  _p33c_PwmModule_ConfigWrite
+                  0x003a58                  _p33c_PwmModule_Dispose
+                  0x003a7c                  _p33c_PwmModule_Initialize
+                  0x003aa0                  _p33c_PwmGenerator_ConfigRead
+                  0x003abe                  _p33c_PwmGenerator_ConfigWrite
+                  0x003ae4                  _p33c_PwmGenerator_Dispose
+                  0x003b0a                  _p33c_PwmGenerator_Enable
+                  0x003b72                  _p33c_PwmGenerator_Disable
+                  0x003b9c                  _p33c_PwmGenerator_Resume
+                  0x003bb4                  _p33c_PwmGenerator_Suspend
+                  0x003bcc                  _p33c_PwmGenerator_SetPeriod
+                  0x003be6                  _p33c_PwmGenerator_SetDutyCycle
+                  0x003c00                  _p33c_PwmGenerator_SetDeadTimes
+                  0x003c28                  _p33c_PwmGenerator_GetHandle
+                  0x003c3e                  _p33c_PwmGenerator_Initialize
+                  0x003c86                  _p33c_PwmGenerator_GetInstance
+                  0x003cb2                  _p33c_PwmGenerator_GetGroup
+                  0x003cee                  _p33c_PwmGenerator_SyncGenerators
+                  0x003dbe                  _drv_BuckConverter_Initialize
+                  0x003e90                  _drv_BuckConverter_Execute
+                  0x003f8e                  _drv_BuckConverter_Start
+                  0x004016                  _drv_BuckConverter_Stop
+                  0x004076                  _drv_BuckConverter_Suspend
+                  0x00408c                  _drv_BuckConverter_Resume
+                  0x004328                  _appLCD_Initialize
+                  0x004354                  _appLCD_Execute
+                  0x004596                  _appLCD_Dispose
+                  0x0045a2                  _State_Initialize
+                  0x004602                  _State_Standby
+                  0x004632                  _State_RampUp
+                  0x0046b6                  _State_Online
+                  0x004702                  _State_Error
+                  0x00472c                  _State_Reset
+                  0x0047e8                  _appFaultMonitor_Initialize
+                  0x0048b8                  _appFaultMonitor_Dispose
+                  0x0048d4                  _appFaultMonitor_Execute
+                  0x00491a                  _uvlo_FaultInitialize
+                  0x004960                  _ovlo_FaultInitialize
+                  0x0049a6                  _regerr_FaultInitialize
+                  0x0049ee                  _Fosc_Initialize
+                  0x004aec                  _Aclk_Initialize
+                  0x004b50                  _drv_FaultCheck
+                  0x004cb0                  _v_loop_Initialize
+                  0x004dee                  _v_loop_Update
+                  0x004e7a                  _v_loop_Reset
+                  0x004e92                  _v_loop_Precharge
+                  0x004eb2                  _v_loop_PTermUpdate
+                  0x004f02                  _Dev_Lcd_Init
+                  0x004f40                  _Dev_Lcd_Clear
+                  0x004f4c                  _Dev_Lcd_GotoXY
+                  0x004f70                  _Dev_Lcd_WriteChar
+                  0x004fe0                  _Dev_Lcd_WriteString
+                  0x004ff6                  _Dev_Lcd_WriteStringXY
+                  0x005004                  _drv_Switch_Initialize
+                  0x005022                  _drv_Switch_Execute
+                  0x0050e2                  _drv_Switch_Dispose
+                  0x0050fc                  _p33c_DacModule__GetHandle
+                  0x005100                  _p33c_DacModule_ConfigRead
+                  0x00510a                  _p33c_DacModule_ConfigWrite
+                  0x005126                  _p33c_DacModule_Dispose
+                  0x00513e                  _p33c_DacInstance__GetHandle
+                  0x005154                  _p33c_DacInstance_ConfigRead
+                  0x005172                  _p33c_DacInstance_ConfigWrite
+                  0x0051a4                  _p33c_DacInstance_Dispose
+                  0x0051c6                  _main
+                  0x005256                  _p33c_GpioInstance_GetHandle
+                  0x00526a                  _p33c_GpioInstance_ConfigRead
+                  0x005286                  _p33c_GpioInstance_ConfigWrite
+                  0x0052aa                  _p33c_GpioInstance_Dispose
+                  0x0052d0                  _Drv_Lcd_Interface_Init
+                  0x0052e6                  _Drv_Lcd_Interface_Spi_Send
+                  0x005328                  _Drv_Lcd_Interface_Reset
+                  0x005334                  _Drv_Lcd_Interface_SendCmd
+                  0x00533c                  _Drv_Lcd_Interface_SendChar
+                  0x005344                  _appSwitch_EventButtonLongPress
+                  0x005352                  _appSwitch_EventButtonUp
+                  0x005356                  _appSwitch_EventButtonDown
+                  0x00535c                  _appSwitch_Initialize
+                  0x00538a                  _appSwitch_Execute
+                  0x0053a0                  _appSwitch_Dispose
+                  0x0053b6                  _appLED_Initialize
+                  0x0053ce                  _appLED_Execute
+                  0x0053fa                  _appLED_Dispose
+                  0x00540c                  _Dsp_Initialize
+                  0x00545a                  _drv_TrapHandler_SoftTrapsInitialize
+                  0x005482                  _DefaultTrapHandler
+                  0x005494                  _Dsp_SetConfig
+                  0x0054b4                  _Dsp_GetConfig
+                  0x0054c2                  _Timer1_Initialize
+                  0x0054ec                  _Gpio_Initialize
+                  0x00550a                  ___delay32
                   0x02bf00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x004aac                  _Aclk_Initialize
-                  0x005442                  _DefaultTrapHandler
-                  0x004f00                  _Dev_Lcd_Clear
-                  0x004f0c                  _Dev_Lcd_GotoXY
-                  0x004ec2                  _Dev_Lcd_Init
-                  0x004f30                  _Dev_Lcd_WriteChar
-                  0x004fa0                  _Dev_Lcd_WriteString
-                  0x004fb6                  _Dev_Lcd_WriteStringXY
-                  0x005290                  _Drv_Lcd_Interface_Init
-                  0x0052e8                  _Drv_Lcd_Interface_Reset
-                  0x0052fc                  _Drv_Lcd_Interface_SendChar
-                  0x0052f4                  _Drv_Lcd_Interface_SendCmd
-                  0x0052a6                  _Drv_Lcd_Interface_Spi_Send
-                  0x005474                  _Dsp_GetConfig
-                  0x0053cc                  _Dsp_Initialize
-                  0x005454                  _Dsp_SetConfig
-                  0x0049ae                  _Fosc_Initialize
-                  0x0054ac                  _Gpio_Initialize
-                  0x0046ba                  _State_Error
-                  0x004568                  _State_Initialize
-                  0x00466e                  _State_Online
-                  0x0045f8                  _State_RampUp
-                  0x0046e4                  _State_Reset
-                  0x0045c8                  _State_Standby
+                  0x004aec                  _Aclk_Initialize
+                  0x005482                  _DefaultTrapHandler
+                  0x004f40                  _Dev_Lcd_Clear
+                  0x004f4c                  _Dev_Lcd_GotoXY
+                  0x004f02                  _Dev_Lcd_Init
+                  0x004f70                  _Dev_Lcd_WriteChar
+                  0x004fe0                  _Dev_Lcd_WriteString
+                  0x004ff6                  _Dev_Lcd_WriteStringXY
+                  0x0052d0                  _Drv_Lcd_Interface_Init
+                  0x005328                  _Drv_Lcd_Interface_Reset
+                  0x00533c                  _Drv_Lcd_Interface_SendChar
+                  0x005334                  _Drv_Lcd_Interface_SendCmd
+                  0x0052e6                  _Drv_Lcd_Interface_Spi_Send
+                  0x0054b4                  _Dsp_GetConfig
+                  0x00540c                  _Dsp_Initialize
+                  0x005494                  _Dsp_SetConfig
+                  0x0049ee                  _Fosc_Initialize
+                  0x0054ec                  _Gpio_Initialize
+                  0x004702                  _State_Error
+                  0x0045a2                  _State_Initialize
+                  0x0046b6                  _State_Online
+                  0x004632                  _State_RampUp
+                  0x00472c                  _State_Reset
+                  0x004602                  _State_Standby
                   0x00363e                  _SubState_IRampUp
                   0x0036ae                  _SubState_PowerGoodDelay
                   0x003614                  _SubState_PowerOnDelay
-                  0x003786                  _SubState_PrepareVRampUp
+                  0x0037c0                  _SubState_PrepareVRampUp
                   0x0036ec                  _SubState_VRampUp
-                  0x005482                  _Timer1_Initialize
+                  0x0054c2                  _Timer1_Initialize
                   0x00042a                  __ADCAN13Interrupt
                   0x0003dc                  __AddressError
                   0x001926                  __Atexit
@@ -704,7 +704,7 @@ External Symbols in Program Memory (by name):
                   0x000db0                  ___Putfld_cdfFnopuxX
                   0x002078                  ___adddf3
                   0x000556                  ___addsf3
-                  0x0054ca                  ___delay32
+                  0x00550a                  ___delay32
                   0x001bb2                  ___divdf3
                   0x002016                  ___divdi3
                   0x000610                  ___divsf3
@@ -763,15 +763,15 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x0008ce                  __sprintf_cdfFnopuxX
-                  0x004870                  _appFaultMonitor_Dispose
-                  0x00488c                  _appFaultMonitor_Execute
-                  0x0047a0                  _appFaultMonitor_Initialize
-                  0x00455c                  _appLCD_Dispose
-                  0x00431a                  _appLCD_Execute
-                  0x0042ee                  _appLCD_Initialize
-                  0x0053ba                  _appLED_Dispose
-                  0x00538e                  _appLED_Execute
-                  0x005376                  _appLED_Initialize
+                  0x0048b8                  _appFaultMonitor_Dispose
+                  0x0048d4                  _appFaultMonitor_Execute
+                  0x0047e8                  _appFaultMonitor_Initialize
+                  0x004596                  _appLCD_Dispose
+                  0x004354                  _appLCD_Execute
+                  0x004328                  _appLCD_Initialize
+                  0x0053fa                  _appLED_Dispose
+                  0x0053ce                  _appLED_Execute
+                  0x0053b6                  _appLED_Initialize
                   0x0033b0                  _appPowerSupply_ControllerInitialize
                   0x0031f2                  _appPowerSupply_ConverterObjectInitialize
                   0x003182                  _appPowerSupply_Dispose
@@ -780,12 +780,12 @@ External Symbols in Program Memory (by name):
                   0x00339a                  _appPowerSupply_PeripheralsInitialize
                   0x0031de                  _appPowerSupply_Resume
                   0x0031cc                  _appPowerSupply_Suspend
-                  0x005360                  _appSwitch_Dispose
-                  0x005316                  _appSwitch_EventButtonDown
-                  0x005304                  _appSwitch_EventButtonLongPress
-                  0x005312                  _appSwitch_EventButtonUp
-                  0x00534a                  _appSwitch_Execute
-                  0x00531c                  _appSwitch_Initialize
+                  0x0053a0                  _appSwitch_Dispose
+                  0x005356                  _appSwitch_EventButtonDown
+                  0x005344                  _appSwitch_EventButtonLongPress
+                  0x005352                  _appSwitch_EventButtonUp
+                  0x00538a                  _appSwitch_Execute
+                  0x00535c                  _appSwitch_Initialize
                   0x002abe                  _buckADC_ChannelInitialize
                   0x002a0e                  _buckADC_ModuleInitialize
                   0x002bf4                  _buckADC_Start
@@ -804,66 +804,66 @@ External Symbols in Program Memory (by name):
                   0x002dda                  _buckPWM_Stop
                   0x002d3e                  _buckPWM_Suspend
                   0x0014ce                  _div
-                  0x003e56                  _drv_BuckConverter_Execute
-                  0x003d84                  _drv_BuckConverter_Initialize
-                  0x004052                  _drv_BuckConverter_Resume
-                  0x003f54                  _drv_BuckConverter_Start
-                  0x003fdc                  _drv_BuckConverter_Stop
-                  0x00403c                  _drv_BuckConverter_Suspend
-                  0x004b10                  _drv_FaultCheck
-                  0x0050a2                  _drv_Switch_Dispose
-                  0x004fe2                  _drv_Switch_Execute
-                  0x004fc4                  _drv_Switch_Initialize
-                  0x00541a                  _drv_TrapHandler_SoftTrapsInitialize
+                  0x003e90                  _drv_BuckConverter_Execute
+                  0x003dbe                  _drv_BuckConverter_Initialize
+                  0x00408c                  _drv_BuckConverter_Resume
+                  0x003f8e                  _drv_BuckConverter_Start
+                  0x004016                  _drv_BuckConverter_Stop
+                  0x004076                  _drv_BuckConverter_Suspend
+                  0x004b50                  _drv_FaultCheck
+                  0x0050e2                  _drv_Switch_Dispose
+                  0x005022                  _drv_Switch_Execute
+                  0x005004                  _drv_Switch_Initialize
+                  0x00545a                  _drv_TrapHandler_SoftTrapsInitialize
                   0x000c60                  _efwrite
                   0x001874                  _fclose
                   0x0019d8                  _free
                   0x0014e4                  _ldiv
                   0x0023a0                  _line_address
-                  0x005186                  _main
+                  0x0051c6                  _main
                   0x001aa2                  _malloc
                   0x000a82                  _memcpy
-                  0x004920                  _ovlo_FaultInitialize
-                  0x005114                  _p33c_DacInstance_ConfigRead
-                  0x005132                  _p33c_DacInstance_ConfigWrite
-                  0x005164                  _p33c_DacInstance_Dispose
-                  0x0050fe                  _p33c_DacInstance__GetHandle
-                  0x0050c0                  _p33c_DacModule_ConfigRead
-                  0x0050ca                  _p33c_DacModule_ConfigWrite
-                  0x0050e6                  _p33c_DacModule_Dispose
-                  0x0050bc                  _p33c_DacModule__GetHandle
-                  0x00522a                  _p33c_GpioInstance_ConfigRead
-                  0x005246                  _p33c_GpioInstance_ConfigWrite
-                  0x00526a                  _p33c_GpioInstance_Dispose
-                  0x005216                  _p33c_GpioInstance_GetHandle
-                  0x003a66                  _p33c_PwmGenerator_ConfigRead
-                  0x003a84                  _p33c_PwmGenerator_ConfigWrite
-                  0x003b38                  _p33c_PwmGenerator_Disable
-                  0x003aaa                  _p33c_PwmGenerator_Dispose
-                  0x003ad0                  _p33c_PwmGenerator_Enable
-                  0x003c78                  _p33c_PwmGenerator_GetGroup
-                  0x003bee                  _p33c_PwmGenerator_GetHandle
-                  0x003c4c                  _p33c_PwmGenerator_GetInstance
-                  0x003c04                  _p33c_PwmGenerator_Initialize
-                  0x003b62                  _p33c_PwmGenerator_Resume
-                  0x003bc6                  _p33c_PwmGenerator_SetDeadTimes
-                  0x003bac                  _p33c_PwmGenerator_SetDutyCycle
-                  0x003b92                  _p33c_PwmGenerator_SetPeriod
-                  0x003b7a                  _p33c_PwmGenerator_Suspend
-                  0x003cb4                  _p33c_PwmGenerator_SyncGenerators
-                  0x0039fe                  _p33c_PwmModule_ConfigRead
-                  0x003a08                  _p33c_PwmModule_ConfigWrite
-                  0x003a1e                  _p33c_PwmModule_Dispose
-                  0x0039fa                  _p33c_PwmModule_GetHandle
-                  0x003a42                  _p33c_PwmModule_Initialize
-                  0x004966                  _regerr_FaultInitialize
+                  0x004960                  _ovlo_FaultInitialize
+                  0x005154                  _p33c_DacInstance_ConfigRead
+                  0x005172                  _p33c_DacInstance_ConfigWrite
+                  0x0051a4                  _p33c_DacInstance_Dispose
+                  0x00513e                  _p33c_DacInstance__GetHandle
+                  0x005100                  _p33c_DacModule_ConfigRead
+                  0x00510a                  _p33c_DacModule_ConfigWrite
+                  0x005126                  _p33c_DacModule_Dispose
+                  0x0050fc                  _p33c_DacModule__GetHandle
+                  0x00526a                  _p33c_GpioInstance_ConfigRead
+                  0x005286                  _p33c_GpioInstance_ConfigWrite
+                  0x0052aa                  _p33c_GpioInstance_Dispose
+                  0x005256                  _p33c_GpioInstance_GetHandle
+                  0x003aa0                  _p33c_PwmGenerator_ConfigRead
+                  0x003abe                  _p33c_PwmGenerator_ConfigWrite
+                  0x003b72                  _p33c_PwmGenerator_Disable
+                  0x003ae4                  _p33c_PwmGenerator_Dispose
+                  0x003b0a                  _p33c_PwmGenerator_Enable
+                  0x003cb2                  _p33c_PwmGenerator_GetGroup
+                  0x003c28                  _p33c_PwmGenerator_GetHandle
+                  0x003c86                  _p33c_PwmGenerator_GetInstance
+                  0x003c3e                  _p33c_PwmGenerator_Initialize
+                  0x003b9c                  _p33c_PwmGenerator_Resume
+                  0x003c00                  _p33c_PwmGenerator_SetDeadTimes
+                  0x003be6                  _p33c_PwmGenerator_SetDutyCycle
+                  0x003bcc                  _p33c_PwmGenerator_SetPeriod
+                  0x003bb4                  _p33c_PwmGenerator_Suspend
+                  0x003cee                  _p33c_PwmGenerator_SyncGenerators
+                  0x003a38                  _p33c_PwmModule_ConfigRead
+                  0x003a42                  _p33c_PwmModule_ConfigWrite
+                  0x003a58                  _p33c_PwmModule_Dispose
+                  0x003a34                  _p33c_PwmModule_GetHandle
+                  0x003a7c                  _p33c_PwmModule_Initialize
+                  0x0049a6                  _regerr_FaultInitialize
                   0x000a90                  _strchr
-                  0x0048da                  _uvlo_FaultInitialize
-                  0x004c70                  _v_loop_Initialize
-                  0x004e72                  _v_loop_PTermUpdate
-                  0x004e52                  _v_loop_Precharge
-                  0x004e3a                  _v_loop_Reset
-                  0x004dae                  _v_loop_Update
+                  0x00491a                  _uvlo_FaultInitialize
+                  0x004cb0                  _v_loop_Initialize
+                  0x004eb2                  _v_loop_PTermUpdate
+                  0x004e92                  _v_loop_Precharge
+                  0x004e7a                  _v_loop_Reset
+                  0x004dee                  _v_loop_Update
                   0x001904                  fclose.CH_elo:_closeall
                   0x0008a6                  sprintf_cdfFnopuxX.CHeo:_eprout
                   0x0008c0                  sprintf_cdfFnopuxX.CHeo:_prout
@@ -1264,7 +1264,7 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x22e7e
+.debug_info       0x000000      0x22e9e
  *(.debug_info)
  .debug_info      0x000000       0x25ce build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_pwm.o
  .debug_info      0x0025ce        0x61c build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_gpio.o
@@ -1291,15 +1291,15 @@ __FBTSEQ
  .debug_info      0x015593       0x1b06 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_converter.o
  .debug_info      0x017099       0x1ab8 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
  .debug_info      0x018b51       0x6892 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_pconfig.o
- .debug_info      0x01f3e3       0x1ab7 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
- .debug_info      0x020e9a        0xca2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
- .debug_info      0x021b3c         0xa2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
- .debug_info      0x021bde        0x49d build/DPSK3_BUCK/production/sources/switch/app_switch.o
- .debug_info      0x02207b        0x5f3 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
- .debug_info      0x02266e        0x810 build/DPSK3_BUCK/production/sources/main.o
+ .debug_info      0x01f3e3       0x1ad7 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
+ .debug_info      0x020eba        0xca2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
+ .debug_info      0x021b5c         0xa2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
+ .debug_info      0x021bfe        0x49d build/DPSK3_BUCK/production/sources/switch/app_switch.o
+ .debug_info      0x02209b        0x5f3 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
+ .debug_info      0x02268e        0x810 build/DPSK3_BUCK/production/sources/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x2732
+.debug_abbrev     0x000000       0x2743
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x23f build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_pwm.o
  .debug_abbrev    0x00023f        0x11e build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_gpio.o
@@ -1326,14 +1326,14 @@ __FBTSEQ
  .debug_abbrev    0x0019e7        0x216 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_converter.o
  .debug_abbrev    0x001bfd        0x213 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
  .debug_abbrev    0x001e10        0x2c8 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_pconfig.o
- .debug_abbrev    0x0020d8        0x20e build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
- .debug_abbrev    0x0022e6        0x14a build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
- .debug_abbrev    0x002430         0x14 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
- .debug_abbrev    0x002444        0x102 build/DPSK3_BUCK/production/sources/switch/app_switch.o
- .debug_abbrev    0x002546        0x118 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
- .debug_abbrev    0x00265e         0xd4 build/DPSK3_BUCK/production/sources/main.o
+ .debug_abbrev    0x0020d8        0x21f build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
+ .debug_abbrev    0x0022f7        0x14a build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
+ .debug_abbrev    0x002441         0x14 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
+ .debug_abbrev    0x002455        0x102 build/DPSK3_BUCK/production/sources/switch/app_switch.o
+ .debug_abbrev    0x002557        0x118 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
+ .debug_abbrev    0x00266f         0xd4 build/DPSK3_BUCK/production/sources/main.o
 
-.debug_line       0x000000       0x2de1
+.debug_line       0x000000       0x2e72
  *(.debug_line)
  .debug_line      0x000000        0x209 build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_pwm.o
  .debug_line      0x000209        0x155 build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_gpio.o
@@ -1358,14 +1358,14 @@ __FBTSEQ
  .debug_line      0x001bd4        0x157 build/DPSK3_BUCK/production/sources/pwr_control/devices/templates/dev_buck_ptemp_pwm.o
  .debug_line      0x001d2b        0x15b build/DPSK3_BUCK/production/sources/pwr_control/devices/templates/dev_buck_ptemp_aux_pwm.o
  .debug_line      0x001e86        0x1c2 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_converter.o
- .debug_line      0x002048        0x1c6 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
- .debug_line      0x00220e        0x422 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_pconfig.o
- .debug_line      0x002630        0x1e9 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
- .debug_line      0x002819        0x127 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
- .debug_line      0x002940         0xe2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
- .debug_line      0x002a22        0x109 build/DPSK3_BUCK/production/sources/switch/app_switch.o
- .debug_line      0x002b2b        0x16f build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
- .debug_line      0x002c9a        0x147 build/DPSK3_BUCK/production/sources/main.o
+ .debug_line      0x002048        0x1c8 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
+ .debug_line      0x002210        0x422 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_pconfig.o
+ .debug_line      0x002632        0x278 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
+ .debug_line      0x0028aa        0x127 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
+ .debug_line      0x0029d1         0xe2 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
+ .debug_line      0x002ab3        0x109 build/DPSK3_BUCK/production/sources/switch/app_switch.o
+ .debug_line      0x002bbc        0x16f build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
+ .debug_line      0x002d2b        0x147 build/DPSK3_BUCK/production/sources/main.o
 
 .debug_frame      0x000000       0x1114
  *(.debug_frame)
@@ -5315,15 +5315,15 @@ __c30_signature
                     0x1376                  _dacModuleConfigClear
                     0x137e                  _dacConfigClear
 
-_0000000007860C80601774df
+_0000000007894C8060215bb0
                     0x138c         0x16
- _0000000007860C80601774df
+ _0000000007894C8060215bb0
                     0x138c         0x16 build/DPSK3_BUCK/production/sources/fault_handler/drivers/fdrv_TrapHandler.o
                     0x138c                  _traplog
 
-_0000000007E61280601774e3
+_000000000779328060215bb4
                     0x13a2         0x14
- _0000000007E61280601774e3
+ _000000000779328060215bb4
                     0x13a2         0x14 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
                     0x13a2                  _v_loop_coefficients
 
@@ -5514,7 +5514,7 @@ _0000000007E61280601774e3
  .const             0xa3a0          0x2 build/DPSK3_BUCK/production/sources/lcd/devices/dev_lcd.o
                     0xa3a0                  _line_address
 
-.text             0x0023a2       0x1cc6
+.text             0x0023a2       0x1d00
  .text            0x0023a2        0xd7a build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_pconfig.o
                   0x0023a2                  _buckPWM_ModuleInitialize
                   0x0023f4                  _buckPWM_ChannelInitialize
@@ -5542,132 +5542,132 @@ _0000000007E61280601774e3
                   0x00339a                  _appPowerSupply_PeripheralsInitialize
                   0x0033b0                  _appPowerSupply_ControllerInitialize
                   0x0035da                  _appPowerSupply_Initialize
- .text            0x003614        0x3e6 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
+ .text            0x003614        0x420 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_substates.o
                   0x003614                  _SubState_PowerOnDelay
                   0x00363e                  _SubState_IRampUp
                   0x0036ae                  _SubState_PowerGoodDelay
                   0x0036ec                  _SubState_VRampUp
-                  0x003786                  _SubState_PrepareVRampUp
- .text            0x0039fa        0x38a build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_pwm.o
-                  0x0039fa                  _p33c_PwmModule_GetHandle
-                  0x0039fe                  _p33c_PwmModule_ConfigRead
-                  0x003a08                  _p33c_PwmModule_ConfigWrite
-                  0x003a1e                  _p33c_PwmModule_Dispose
-                  0x003a42                  _p33c_PwmModule_Initialize
-                  0x003a66                  _p33c_PwmGenerator_ConfigRead
-                  0x003a84                  _p33c_PwmGenerator_ConfigWrite
-                  0x003aaa                  _p33c_PwmGenerator_Dispose
-                  0x003ad0                  _p33c_PwmGenerator_Enable
-                  0x003b38                  _p33c_PwmGenerator_Disable
-                  0x003b62                  _p33c_PwmGenerator_Resume
-                  0x003b7a                  _p33c_PwmGenerator_Suspend
-                  0x003b92                  _p33c_PwmGenerator_SetPeriod
-                  0x003bac                  _p33c_PwmGenerator_SetDutyCycle
-                  0x003bc6                  _p33c_PwmGenerator_SetDeadTimes
-                  0x003bee                  _p33c_PwmGenerator_GetHandle
-                  0x003c04                  _p33c_PwmGenerator_Initialize
-                  0x003c4c                  _p33c_PwmGenerator_GetInstance
-                  0x003c78                  _p33c_PwmGenerator_GetGroup
-                  0x003cb4                  _p33c_PwmGenerator_SyncGenerators
- .text            0x003d84        0x2e4 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_converter.o
-                  0x003d84                  _drv_BuckConverter_Initialize
-                  0x003e56                  _drv_BuckConverter_Execute
-                  0x003f54                  _drv_BuckConverter_Start
-                  0x003fdc                  _drv_BuckConverter_Stop
-                  0x00403c                  _drv_BuckConverter_Suspend
-                  0x004052                  _drv_BuckConverter_Resume
+                  0x0037c0                  _SubState_PrepareVRampUp
+ .text            0x003a34        0x38a build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_pwm.o
+                  0x003a34                  _p33c_PwmModule_GetHandle
+                  0x003a38                  _p33c_PwmModule_ConfigRead
+                  0x003a42                  _p33c_PwmModule_ConfigWrite
+                  0x003a58                  _p33c_PwmModule_Dispose
+                  0x003a7c                  _p33c_PwmModule_Initialize
+                  0x003aa0                  _p33c_PwmGenerator_ConfigRead
+                  0x003abe                  _p33c_PwmGenerator_ConfigWrite
+                  0x003ae4                  _p33c_PwmGenerator_Dispose
+                  0x003b0a                  _p33c_PwmGenerator_Enable
+                  0x003b72                  _p33c_PwmGenerator_Disable
+                  0x003b9c                  _p33c_PwmGenerator_Resume
+                  0x003bb4                  _p33c_PwmGenerator_Suspend
+                  0x003bcc                  _p33c_PwmGenerator_SetPeriod
+                  0x003be6                  _p33c_PwmGenerator_SetDutyCycle
+                  0x003c00                  _p33c_PwmGenerator_SetDeadTimes
+                  0x003c28                  _p33c_PwmGenerator_GetHandle
+                  0x003c3e                  _p33c_PwmGenerator_Initialize
+                  0x003c86                  _p33c_PwmGenerator_GetInstance
+                  0x003cb2                  _p33c_PwmGenerator_GetGroup
+                  0x003cee                  _p33c_PwmGenerator_SyncGenerators
+ .text            0x003dbe        0x2e4 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_converter.o
+                  0x003dbe                  _drv_BuckConverter_Initialize
+                  0x003e90                  _drv_BuckConverter_Execute
+                  0x003f8e                  _drv_BuckConverter_Start
+                  0x004016                  _drv_BuckConverter_Stop
+                  0x004076                  _drv_BuckConverter_Suspend
+                  0x00408c                  _drv_BuckConverter_Resume
 
-.dinit            0x004068        0x286
- .dinit           0x004068        0x286 data_init
+.dinit            0x0040a2        0x286
+ .dinit           0x0040a2        0x286 data_init
 
-.text             0x0042ee       0x11dc
- .text            0x0042ee        0x27a build/DPSK3_BUCK/production/sources/lcd/app_lcd.o
-                  0x0042ee                  _appLCD_Initialize
-                  0x00431a                  _appLCD_Execute
-                  0x00455c                  _appLCD_Dispose
- .text            0x004568        0x238 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
-                  0x004568                  _State_Initialize
-                  0x0045c8                  _State_Standby
-                  0x0045f8                  _State_RampUp
-                  0x00466e                  _State_Online
-                  0x0046ba                  _State_Error
-                  0x0046e4                  _State_Reset
- .text            0x0047a0        0x20e build/DPSK3_BUCK/production/sources/fault_handler/app_fault_monitor.o
-                  0x0047a0                  _appFaultMonitor_Initialize
-                  0x004870                  _appFaultMonitor_Dispose
-                  0x00488c                  _appFaultMonitor_Execute
-                  0x0048da                  _uvlo_FaultInitialize
-                  0x004920                  _ovlo_FaultInitialize
-                  0x004966                  _regerr_FaultInitialize
- .text            0x0049ae        0x162 build/DPSK3_BUCK/production/sources/config/init/init_fosc.o
-                  0x0049ae                  _Fosc_Initialize
-                  0x004aac                  _Aclk_Initialize
- .text            0x004b10        0x160 build/DPSK3_BUCK/production/sources/fault_handler/drivers/drv_fault_handler.o
-                  0x004b10                  _drv_FaultCheck
- .text            0x004c70        0x13e build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
-                  0x004c70                  _v_loop_Initialize
- .text            0x004dae        0x114 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
-                  0x004dae                  _v_loop_Update
-                  0x004e3a                  _v_loop_Reset
-                  0x004e52                  _v_loop_Precharge
-                  0x004e72                  _v_loop_PTermUpdate
- .text            0x004ec2        0x102 build/DPSK3_BUCK/production/sources/lcd/devices/dev_lcd.o
-                  0x004ec2                  _Dev_Lcd_Init
-                  0x004f00                  _Dev_Lcd_Clear
-                  0x004f0c                  _Dev_Lcd_GotoXY
-                  0x004f30                  _Dev_Lcd_WriteChar
-                  0x004fa0                  _Dev_Lcd_WriteString
-                  0x004fb6                  _Dev_Lcd_WriteStringXY
- .text            0x004fc4         0xf8 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
-                  0x004fc4                  _drv_Switch_Initialize
-                  0x004fe2                  _drv_Switch_Execute
-                  0x0050a2                  _drv_Switch_Dispose
- .text            0x0050bc         0xca build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_dac.o
-                  0x0050bc                  _p33c_DacModule__GetHandle
-                  0x0050c0                  _p33c_DacModule_ConfigRead
-                  0x0050ca                  _p33c_DacModule_ConfigWrite
-                  0x0050e6                  _p33c_DacModule_Dispose
-                  0x0050fe                  _p33c_DacInstance__GetHandle
-                  0x005114                  _p33c_DacInstance_ConfigRead
-                  0x005132                  _p33c_DacInstance_ConfigWrite
-                  0x005164                  _p33c_DacInstance_Dispose
- .text            0x005186         0x90 build/DPSK3_BUCK/production/sources/main.o
-                  0x005186                  _main
- .text            0x005216         0x7a build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_gpio.o
-                  0x005216                  _p33c_GpioInstance_GetHandle
-                  0x00522a                  _p33c_GpioInstance_ConfigRead
-                  0x005246                  _p33c_GpioInstance_ConfigWrite
-                  0x00526a                  _p33c_GpioInstance_Dispose
- .text            0x005290         0x74 build/DPSK3_BUCK/production/sources/lcd/drivers/drv_lcd_interface.o
-                  0x005290                  _Drv_Lcd_Interface_Init
-                  0x0052a6                  _Drv_Lcd_Interface_Spi_Send
-                  0x0052e8                  _Drv_Lcd_Interface_Reset
-                  0x0052f4                  _Drv_Lcd_Interface_SendCmd
-                  0x0052fc                  _Drv_Lcd_Interface_SendChar
- .text            0x005304         0x72 build/DPSK3_BUCK/production/sources/switch/app_switch.o
-                  0x005304                  _appSwitch_EventButtonLongPress
-                  0x005312                  _appSwitch_EventButtonUp
-                  0x005316                  _appSwitch_EventButtonDown
-                  0x00531c                  _appSwitch_Initialize
-                  0x00534a                  _appSwitch_Execute
-                  0x005360                  _appSwitch_Dispose
- .text            0x005376         0x56 build/DPSK3_BUCK/production/sources/led/app_led.o
-                  0x005376                  _appLED_Initialize
-                  0x00538e                  _appLED_Execute
-                  0x0053ba                  _appLED_Dispose
- .text            0x0053cc         0x4e build/DPSK3_BUCK/production/sources/config/init/init_dsp.o
-                  0x0053cc                  _Dsp_Initialize
- .text            0x00541a         0x3a build/DPSK3_BUCK/production/sources/fault_handler/drivers/fdrv_TrapHandler.o
-                  0x00541a                  _drv_TrapHandler_SoftTrapsInitialize
-                  0x005442                  _DefaultTrapHandler
- .text            0x005454         0x2e build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_dsp.o
-                  0x005454                  _Dsp_SetConfig
-                  0x005474                  _Dsp_GetConfig
- .text            0x005482         0x2a build/DPSK3_BUCK/production/sources/config/init/init_timer1.o
-                  0x005482                  _Timer1_Initialize
- .text            0x0054ac         0x1e build/DPSK3_BUCK/production/sources/config/init/init_gpio.o
-                  0x0054ac                  _Gpio_Initialize
+.text             0x004328       0x11e2
+ .text            0x004328        0x27a build/DPSK3_BUCK/production/sources/lcd/app_lcd.o
+                  0x004328                  _appLCD_Initialize
+                  0x004354                  _appLCD_Execute
+                  0x004596                  _appLCD_Dispose
+ .text            0x0045a2        0x246 build/DPSK3_BUCK/production/sources/pwr_control/devices/dev_buck_opstates.o
+                  0x0045a2                  _State_Initialize
+                  0x004602                  _State_Standby
+                  0x004632                  _State_RampUp
+                  0x0046b6                  _State_Online
+                  0x004702                  _State_Error
+                  0x00472c                  _State_Reset
+ .text            0x0047e8        0x206 build/DPSK3_BUCK/production/sources/fault_handler/app_fault_monitor.o
+                  0x0047e8                  _appFaultMonitor_Initialize
+                  0x0048b8                  _appFaultMonitor_Dispose
+                  0x0048d4                  _appFaultMonitor_Execute
+                  0x00491a                  _uvlo_FaultInitialize
+                  0x004960                  _ovlo_FaultInitialize
+                  0x0049a6                  _regerr_FaultInitialize
+ .text            0x0049ee        0x162 build/DPSK3_BUCK/production/sources/config/init/init_fosc.o
+                  0x0049ee                  _Fosc_Initialize
+                  0x004aec                  _Aclk_Initialize
+ .text            0x004b50        0x160 build/DPSK3_BUCK/production/sources/fault_handler/drivers/drv_fault_handler.o
+                  0x004b50                  _drv_FaultCheck
+ .text            0x004cb0        0x13e build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop.o
+                  0x004cb0                  _v_loop_Initialize
+ .text            0x004dee        0x114 build/DPSK3_BUCK/production/sources/pwr_control/drivers/v_loop_asm.o
+                  0x004dee                  _v_loop_Update
+                  0x004e7a                  _v_loop_Reset
+                  0x004e92                  _v_loop_Precharge
+                  0x004eb2                  _v_loop_PTermUpdate
+ .text            0x004f02        0x102 build/DPSK3_BUCK/production/sources/lcd/devices/dev_lcd.o
+                  0x004f02                  _Dev_Lcd_Init
+                  0x004f40                  _Dev_Lcd_Clear
+                  0x004f4c                  _Dev_Lcd_GotoXY
+                  0x004f70                  _Dev_Lcd_WriteChar
+                  0x004fe0                  _Dev_Lcd_WriteString
+                  0x004ff6                  _Dev_Lcd_WriteStringXY
+ .text            0x005004         0xf8 build/DPSK3_BUCK/production/sources/switch/drivers/drv_switch.o
+                  0x005004                  _drv_Switch_Initialize
+                  0x005022                  _drv_Switch_Execute
+                  0x0050e2                  _drv_Switch_Dispose
+ .text            0x0050fc         0xca build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_dac.o
+                  0x0050fc                  _p33c_DacModule__GetHandle
+                  0x005100                  _p33c_DacModule_ConfigRead
+                  0x00510a                  _p33c_DacModule_ConfigWrite
+                  0x005126                  _p33c_DacModule_Dispose
+                  0x00513e                  _p33c_DacInstance__GetHandle
+                  0x005154                  _p33c_DacInstance_ConfigRead
+                  0x005172                  _p33c_DacInstance_ConfigWrite
+                  0x0051a4                  _p33c_DacInstance_Dispose
+ .text            0x0051c6         0x90 build/DPSK3_BUCK/production/sources/main.o
+                  0x0051c6                  _main
+ .text            0x005256         0x7a build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_gpio.o
+                  0x005256                  _p33c_GpioInstance_GetHandle
+                  0x00526a                  _p33c_GpioInstance_ConfigRead
+                  0x005286                  _p33c_GpioInstance_ConfigWrite
+                  0x0052aa                  _p33c_GpioInstance_Dispose
+ .text            0x0052d0         0x74 build/DPSK3_BUCK/production/sources/lcd/drivers/drv_lcd_interface.o
+                  0x0052d0                  _Drv_Lcd_Interface_Init
+                  0x0052e6                  _Drv_Lcd_Interface_Spi_Send
+                  0x005328                  _Drv_Lcd_Interface_Reset
+                  0x005334                  _Drv_Lcd_Interface_SendCmd
+                  0x00533c                  _Drv_Lcd_Interface_SendChar
+ .text            0x005344         0x72 build/DPSK3_BUCK/production/sources/switch/app_switch.o
+                  0x005344                  _appSwitch_EventButtonLongPress
+                  0x005352                  _appSwitch_EventButtonUp
+                  0x005356                  _appSwitch_EventButtonDown
+                  0x00535c                  _appSwitch_Initialize
+                  0x00538a                  _appSwitch_Execute
+                  0x0053a0                  _appSwitch_Dispose
+ .text            0x0053b6         0x56 build/DPSK3_BUCK/production/sources/led/app_led.o
+                  0x0053b6                  _appLED_Initialize
+                  0x0053ce                  _appLED_Execute
+                  0x0053fa                  _appLED_Dispose
+ .text            0x00540c         0x4e build/DPSK3_BUCK/production/sources/config/init/init_dsp.o
+                  0x00540c                  _Dsp_Initialize
+ .text            0x00545a         0x3a build/DPSK3_BUCK/production/sources/fault_handler/drivers/fdrv_TrapHandler.o
+                  0x00545a                  _drv_TrapHandler_SoftTrapsInitialize
+                  0x005482                  _DefaultTrapHandler
+ .text            0x005494         0x2e build/DPSK3_BUCK/production/sources/common/p33c_pral/p33c_dsp.o
+                  0x005494                  _Dsp_SetConfig
+                  0x0054b4                  _Dsp_GetConfig
+ .text            0x0054c2         0x2a build/DPSK3_BUCK/production/sources/config/init/init_timer1.o
+                  0x0054c2                  _Timer1_Initialize
+ .text            0x0054ec         0x1e build/DPSK3_BUCK/production/sources/config/init/init_gpio.o
+                  0x0054ec                  _Gpio_Initialize
 
-.init.delay32     0x0054ca         0x1c
- .init.delay32    0x0054ca         0x1c c:/program files/microchip/xc16/v1.60/bin/bin/../../lib\liblega-pic30-elf.a(delay32ch.Leo)
-                  0x0054ca                  ___delay32
+.init.delay32     0x00550a         0x1c
+ .init.delay32    0x00550a         0x1c c:/program files/microchip/xc16/v1.60/bin/bin/../../lib\liblega-pic30-elf.a(delay32ch.Leo)
+                  0x00550a                  ___delay32

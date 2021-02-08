@@ -198,7 +198,7 @@ volatile uint16_t SubState_PrepareVRampUp(volatile struct BUCK_POWER_CONTROLLER_
                 *buckInstance->i_loop[_i].controller->Ports.AltTarget.ptrAddress = _start_dc; // set initial PWM duty ratio
         }
     }
-    else if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC)
+    else if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC) //ADDED
     {
         
         return(BUCK_OPSRET_COMPLETE);
@@ -242,7 +242,14 @@ volatile uint16_t SubState_VRampUp(volatile struct BUCK_POWER_CONTROLLER_s *buck
     // ensure control loop is enabled
     if(!buckInstance->v_loop.controller->status.bits.enabled) {
 
-        // Enable all PWM channels
+       if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC)  // Enable all PWM channels
+       {
+           for (_i=0;_i<buckInstance->set_values.no_of_phases;_i++)
+           {
+               
+              PG1DC =  buckInstance->sw_node[_i].duty_ratio_max; // just for testing
+           }
+       }   
         retval &= buckPWM_Resume(buckInstance);  // Enable PWM outputs
 
         // In voltage mode control...
@@ -250,6 +257,13 @@ volatile uint16_t SubState_VRampUp(volatile struct BUCK_POWER_CONTROLLER_s *buck
         {   // only enable voltage loop
             buckInstance->v_loop.controller->status.bits.enabled = true; // enable voltage loop controller
         }
+        
+        else if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_PCMC) //Added
+        {
+             buckInstance->v_loop.controller->status.bits.enabled = true; // enable voltage loop controller
+            
+        }
+        
         // In average current mode control...
         else if (buckInstance->set_values.control_mode == BUCK_CONTROL_MODE_ACMC)
         {

@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/devices/templates/dev_buck_ptemp_pwm.h</file>
-            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/app_power_control.c</file>
-            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/devices/dev_buck_pconfig.h</file>
-            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/devices/dev_buck_templates.h</file>
+            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/main.c</file>
+            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/app_power_control_isr.c</file>
+            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/devices/dev_buck_opstates.c</file>
+            <file>file:/C:/T460P/T460pD/CodeRepo2/CE202C/dpsk_vmc.X/sources/pwr_control/devices/dev_buck_converter.c</file>
         </group>
     </open-files>
 </project-private>

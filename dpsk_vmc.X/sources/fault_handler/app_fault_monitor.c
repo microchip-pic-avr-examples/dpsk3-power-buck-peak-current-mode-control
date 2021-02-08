@@ -105,8 +105,8 @@ volatile uint16_t appFaultMonitor_Execute(void)
     // Call fault handler
     retval &= drv_FaultCheck(&fltobj_BuckUVLO);
     retval &= drv_FaultCheck(&fltobj_BuckOVLO);
-    retval &= drv_FaultCheck(&fltobj_BuckRegErr);
-
+   // retval &= drv_FaultCheck(&fltobj_BuckRegErr);
+   fltobj_BuckRegErr.Status.bits.FaultStatus =0; // TODO disable later
     // Combine individual fault bits to a common fault indicator
     buck.status.bits.fault_active = (bool) (
         fltobj_BuckUVLO.Status.bits.FaultStatus | 
