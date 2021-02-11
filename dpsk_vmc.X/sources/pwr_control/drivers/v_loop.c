@@ -1,5 +1,5 @@
 /* *********************************************************************************
- * z-Domain Control Loop Designer, Version 0.9.10.501
+ * PowerSmart™ Digital Control Library Designer, Version 0.9.12.672
  * *********************************************************************************
  * 2p2z controller function declarations and compensation filter coefficients
  * derived for following operating conditions:
@@ -8,23 +8,25 @@
  *  Controller Type:    2P2Z - Basic Current Mode Compensator
  *  Sampling Frequency: 500000 Hz
  *  Fixed Point Format: Q15
- *  Scaling Mode:       4 - Fast Floating Point Coefficient Scaling
+ *  Scaling Mode:       1 - Single Bit-Shift Scaling
  *  Input Gain:         0.5
  *
  * *********************************************************************************
- * CGS Version:         2.0.13
- * CGS Date:            07/30/2020
+ * CGS Version:         3.0.6
+ * CGS Date:            02/03/2021
  * *********************************************************************************
  * User:                A14426
- * Date/Time:           1/27/2021 11:29:15 PM
+ * Date/Time:           02/11/2021 17:42:14
  * ********************************************************************************/
 
 #include "v_loop.h"
 
 /* *********************************************************************************
  * Data Arrays:
+ * ============
+ *
  * This source file declares the default parameters of the z-domain compensation
- * filter. The NPNZ16b_t data structure contains two pointers to A- and B-
+ * filter. The NPNZ16b_s data structure contains two pointers to A- and B-
  * coefficient arrays and two pointers to control and error history arrays.
  *
  * For optimized data processing during DSP computations, these arrays must be
@@ -55,64 +57,52 @@ volatile uint16_t v_loop_ErrorHistory_size = (sizeof(v_loop_histories.ErrorHisto
  * *********************************************************************************
  * Filter Coefficients and Parameters:
  * ********************************************************************************/
+
 volatile int32_t v_loop_ACoefficients [2] =
 {
-    0x6665FFFF, // Coefficient A1 will be multiplied with controller output u(n-1)
-    0xB3370000  // Coefficient A2 will be multiplied with controller output u(n-2)
+    0x00006665, // Coefficient A1 will be multiplied with controller output u(n-1)
+    0x0000D99C  // Coefficient A2 will be multiplied with controller output u(n-2)
 };
 
 volatile int32_t v_loop_BCoefficients [3] =
 {
-    0x45460000, // Coefficient B0 will be multiplied with error input e(n-0)
-    0x6B160008, // Coefficient B1 will be multiplied with error input e(n-1)
-    0xBB260000  // Coefficient B2 will be multiplied with error input e(n-2)
+    0x000022A5, // Coefficient B0 will be multiplied with error input e(n-0)
+    0x00000036, // Coefficient B1 will be multiplied with error input e(n-1)
+    0x0000DD92  // Coefficient B2 will be multiplied with error input e(n-2)
 };
 
 // Coefficient normalization factors
-volatile int16_t v_loop_pre_scaler = 3;
-volatile int16_t v_loop_post_shift_A = 0;
-volatile int16_t v_loop_post_shift_B = 0;
-volatile fractional v_loop_post_scaler = 0x0000;
+volatile int16_t v_loop_pre_scaler = 3;           // Bit-shift value used to perform input value normalization
+volatile int16_t v_loop_post_shift_A = -1;        // Bit-shift value A used to perform control output value backward normalization
+volatile int16_t v_loop_post_shift_B = 0;         // Bit-shift value B used to perform control output value backward normalization
+volatile fractional v_loop_post_scaler = 0x0000;  // Q15 fractional factor used to perform control output value backward normalization
 
 // P-Term Coefficient for Plant Measurements
-volatile int16_t v_loop_pterm_factor = 0x65D7;
-volatile int16_t v_loop_pterm_scaler = 0xFFFF;
+volatile int16_t v_loop_pterm_factor = 0x65D7;    // Q15 fractional of the P-Term factor
+volatile int16_t v_loop_pterm_scaler = 0xFFFF;    // Bit-shift scaler of the P-Term factor
 
 
-// User-defined NPNZ16b_t controller data object
-volatile struct NPNZ16b_s v_loop; // user-controller data object
+// User-defined NPNZ16b_s controller data object
+volatile struct NPNZ16b_s v_loop;                 // user-controller data object
 
 /* ********************************************************************************/
 
-/*!v_loop_Init()
- * *********************************************************************************
- * Summary: Initializes controller coefficient arrays and normalization
+/* *********************************************************************************
+ * Controller Initialization:
+ * ==========================
+  *
+ * Public controller initialization function loading known default settings
+ * into the NPNZ16b data structure.
  *
- * Parameters:
- *     - struct NPNZ16b_s* controller
- *
- * Returns:
- *     - uint16_t:  0->failure
- *                  1->success
-
- * Description:
- * This function needs to be called from user code once to initialize coefficient
- * arrays and number normalization settings of the v_loop controller
- * object.
- *
- * PLEASE NOTE:
- * This routine DOES NOT initialize the complete controller object.
- * User-defined settings such as pointers to the control reference, source and
- * target registers, output minima and maxima and further, design-dependent
- * settings, need to be specified in user code.
  * ********************************************************************************/
+
 volatile uint16_t v_loop_Initialize(volatile struct NPNZ16b_s* controller)
 {
     volatile uint16_t i=0;
 
     // Initialize controller data structure at runtime with pre-defined default values
-    controller->status.value = NPNZ16_CONTROL_STATUS_CLEAR;  // clear all status flag bits (will turn off execution))
-    
+    controller->status.value = NPNZ_STATUS_CLEAR; // clear all status flag bits (will turn off execution))
+
     controller->Filter.ptrACoefficients = &v_loop_coefficients.ACoefficients[0]; // initialize pointer to A-coefficients array
     controller->Filter.ptrBCoefficients = &v_loop_coefficients.BCoefficients[0]; // initialize pointer to B-coefficients array
     controller->Filter.ptrControlHistory = &v_loop_histories.ControlHistory[0]; // initialize pointer to control history array
@@ -126,25 +116,27 @@ volatile uint16_t v_loop_Initialize(volatile struct NPNZ16b_s* controller)
     controller->Filter.BCoefficientsArraySize = v_loop_BCoefficients_size; // initialize A-coefficients array size
     controller->Filter.ControlHistoryArraySize = v_loop_ControlHistory_size; // initialize control history array size
     controller->Filter.ErrorHistoryArraySize = v_loop_ErrorHistory_size; // initialize error history array size
-    
-    
-    // Load default set of A-coefficients from user RAM into X-Space controller A-array
+
+    // Load default set of A-coefficients from user RAM into controller A-array located in X-Space
     for(i=0; i<controller->Filter.ACoefficientsArraySize; i++)
     {
-        v_loop_coefficients.ACoefficients[i] = v_loop_ACoefficients[i];
+        v_loop_coefficients.ACoefficients[i] = v_loop_ACoefficients[i]; // Load coefficient A1 value into v_loop coefficient data space
+        v_loop_coefficients.ACoefficients[i] = v_loop_ACoefficients[i]; // Load coefficient A2 value into v_loop coefficient data space
     }
 
-    // Load default set of B-coefficients from user RAM into X-Space controller B-array
+    // Load default set of B-coefficients from user RAM into controller B-array located in X-Space
     for(i=0; i<controller->Filter.BCoefficientsArraySize; i++)
     {
-        v_loop_coefficients.BCoefficients[i] = v_loop_BCoefficients[i];
+        v_loop_coefficients.BCoefficients[i] = v_loop_BCoefficients[i]; // Load coefficient B0 value into v_loop coefficient data space
+        v_loop_coefficients.BCoefficients[i] = v_loop_BCoefficients[i]; // Load coefficient B1 value into v_loop coefficient data space
+        v_loop_coefficients.BCoefficients[i] = v_loop_BCoefficients[i]; // Load coefficient B2 value into v_loop coefficient data space
     }
 
     // Clear error and control histories of the 3P3Z controller
     v_loop_Reset(&v_loop);
     
     // Load P-Term factor and scaler into data structure
-    controller->Filter.PTermFactor = v_loop_pterm_factor;;
+    controller->Filter.PTermFactor = v_loop_pterm_factor;
     controller->Filter.PTermScaler = v_loop_pterm_scaler;
     
     return(1);

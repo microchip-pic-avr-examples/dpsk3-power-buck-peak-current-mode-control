@@ -440,8 +440,8 @@ volatile uint16_t appPowerSupply_ControllerInitialize(void)
     buck.v_loop.controller->DataProviders.ptrDProvControlOutput = &buck.data.control_output; //NULL; // when set to null, it created trap error
     
     // Cascaded Function Configuration
-    buck.v_loop.controller->CascadeTrigger.ptrCascadedFunction = NULL;
-    buck.v_loop.controller->CascadeTrigger.CascadedFunctionParam = 0;
+//    buck.v_loop.controller->CascadeTrigger.ptrCascadedFunction = NULL;
+//    buck.v_loop.controller->CascadeTrigger.CascadedFunctionParam = 0;
     
     // Initialize Advanced Control Settings (not used in this code example)
     buck.v_loop.controller->GainControl.AgcFactor = 0x7FFF; // Adaptive Gain Control factor fractional
