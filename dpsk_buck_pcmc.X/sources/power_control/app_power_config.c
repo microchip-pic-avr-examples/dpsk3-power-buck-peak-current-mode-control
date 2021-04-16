@@ -66,7 +66,7 @@ volatile uint16_t appPowerSupply_ConverterObjectInitialize(void)
     buck.sw_node[0].gpio_low = BUCK_PWM_GPIO_PORT_PINL;
     buck.sw_node[0].swap_outputs = BUCK_PWM_OUTPUT_SWAP;
     buck.sw_node[0].master_period_enable = false;
-    buck.sw_node[0].sync_drive = true; 
+    buck.sw_node[0].sync_drive = false; 
     buck.sw_node[0].period = BUCK_PWM_PERIOD;
     buck.sw_node[0].phase = BUCK_PWM_PHASE_SHIFT;
     buck.sw_node[0].duty_ratio_min = BUCK_PWM_DC_MIN;
@@ -260,7 +260,7 @@ volatile uint16_t appPowerSupply_ControllerInitialize(void)
     // Initialize Default Loop Configuration
     buck.v_loop.feedback_offset = BUCK_VOUT_OFFSET;
     buck.v_loop.reference = BUCK_VOUT_REF;
-    buck.v_loop.minimum = BUCK_ISNS_MIN;
+    buck.v_loop.minimum = 0; //DAC_MIN;
     buck.v_loop.maximum = BUCK_ISNS_OCL;
     buck.v_loop.trigger_offset = ((BUCK_PWM_PERIOD >> 1) + BUCK_VOUT_ADC_TRGDLY);
     
