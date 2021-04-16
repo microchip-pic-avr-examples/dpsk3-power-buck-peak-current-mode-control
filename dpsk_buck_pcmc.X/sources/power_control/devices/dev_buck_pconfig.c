@@ -203,6 +203,7 @@ volatile uint16_t buckPWM_ChannelInitialize(volatile struct BUCK_CONVERTER_s* bu
             pg->PGxCLPCIL.value = REG_PGxCLPCILPC;  // Load PCI configuration template of Current Limit PCI Low Register
             pg->PGxCLPCIH.value = REG_PGxCLPCIHPC;  // Load PCI configuration template of Current Limit PCI High Register
             pg->PGxCLPCIL.bits.PSS = buckInstance->sw_node[_i].slope_compensation.pwm_trigger_input;
+            pg->PGxIOCONL.value = REG_PGxIOCONLPC; // Load IO configuration template for peak current mode control
             
         }
         
@@ -902,6 +903,8 @@ volatile uint16_t buckDAC_ChannelInitialize(volatile struct BUCK_CONVERTER_s* bu
         dacInstance->SLPxCONL.bits.SLPSTRT  = buckInstance->sw_node[_i].pwm_instance; // Set PWM trigger starting slope
         dacInstance->SLPxCONL.bits.SLPSTOPA = buckInstance->sw_node[_i].pwm_instance; // Set PWM trigger stopping slope
         dacInstance->SLPxCONL.bits.SLPSTOPB = buckInstance->sw_node[_i].slope_compensation.cmp_instance;  // Set comparator trigger stopping slope
+
+
     }
 
     return (retval);

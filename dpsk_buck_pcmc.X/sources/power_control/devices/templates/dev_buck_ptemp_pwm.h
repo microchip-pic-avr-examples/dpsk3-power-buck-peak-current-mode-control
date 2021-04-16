@@ -562,6 +562,7 @@
                           ||||||||||||||| _ BIT  0: 
                           ||||||||||||||||  */
 #define REG_PGxIOCONL   0b0011000000000000
+#define REG_PGxIOCONLPC 0b0011000000010000
 
 /**
  * @def REG_PGxIOCONH
