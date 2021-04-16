@@ -209,9 +209,9 @@ struct BUCK_CONVERTER_STATUS_s
         volatile bool ready:1;                  ///< Bit #0: status bit, indicating buck converter is initialized and ready to run
         volatile bool adc_active:1;             ///< Bit #1: indicating that ADC has been started and samples are taken
         volatile bool pwm_active:1;             ///< Bit #2: indicating that PWM has been started and ADC triggers are generated
-        volatile unsigned :1;                   ///< Bit #3: (reserved)
-        volatile bool cs_calib_complete :1;     ///< Bit #4: indicating that current sensor calibration has completed
-        volatile bool fault_active :1;          ///< Bit #5: Flag bit indicating system is in enforced shut down mode (usually due to a fault condition)
+        volatile bool fault_active :1;          ///< Bit #3: Flag bit indicating system is in enforced shut down mode (usually due to a fault condition)
+        volatile bool fault_latch :1;           ///< Bit #4: Flag bit indicating system is in latched enforced shut down mode (requires manual clearance)
+        volatile bool cs_calib_complete :1;     ///< Bit #5: indicating that current sensor calibration has completed
         volatile bool suspend :1;               ///< Bit #6: Control bit to put the converter in suspend mode (turned off while ENABLE bit is still on)
         volatile bool busy :1;                  ///< Bit #7:  Flag bit indicating that the state machine is executing a process (e.g. startup-ramp)
 
