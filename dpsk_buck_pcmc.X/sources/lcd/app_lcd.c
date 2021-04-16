@@ -69,7 +69,7 @@ volatile uint16_t lcd_cnt = 0;  ///< Local counter used to trigger LCD refresh e
  *  This application supports multiple different screens which can be selected by
  *  the user to display different runtime data fields.
  ***********************************************************************************/
-#define LCD_NO_OF_SCREENS   3   ///< Number of screens which can be selected
+#define LCD_NO_OF_SCREENS   3   ///< Number of screens (minus one) which can be selected
 
 /** @} */ // end of group app-layer-lcd-properties-private
 
