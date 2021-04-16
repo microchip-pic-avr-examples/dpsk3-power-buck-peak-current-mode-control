@@ -412,7 +412,7 @@
  * 
  **************************************************************************************************/
     
-#define BUCK_DAC_SLOPE_START_DELAY  (float) 0.040 ///< Delay in {%] until the slope compensation ramp starts
+#define BUCK_DAC_SLOPE_START_DELAY  (float) 0.100 ///< Delay in {%] until the slope compensation ramp starts
 #define BUCK_DAC_SLOPE_STOP_DELAY   (float) 0.900 ///< Delay in [%] until the slope compensation ramp stops
 #define BUCK_DAC_VOLTAGE_INITIAL    (float) 0.000 ///< Initial voltage reference, also applied after every power supply reset event
 #define BUCK_SLOPE_COMP_SLEW_RATE   (float) 0.240 ///< Slope compensation slew rate in [V/usec]
