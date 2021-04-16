@@ -53,7 +53,8 @@
  **********************************************************************************/
 
 typedef struct DEBUGGING_LED_s{
-    volatile uint16_t period;
+    volatile uint16_t on_time;
+    volatile uint16_t off_time;
 }DEBUGGING_LED_t;    
 
 

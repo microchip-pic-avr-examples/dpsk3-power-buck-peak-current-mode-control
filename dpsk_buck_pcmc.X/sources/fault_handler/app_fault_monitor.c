@@ -106,6 +106,7 @@ volatile uint16_t appFaultMonitor_Execute(void)
         else
         { // Latch Fault Condition keeping power supply disabled
             buck.status.bits.fault_active = true; 
+            buck.status.bits.fault_latch = true; 
             FaultRecoveryCounter = BUCK_FAULT_RESTART_CYCLES;
         }
     }
