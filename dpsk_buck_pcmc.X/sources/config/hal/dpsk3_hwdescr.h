@@ -316,14 +316,14 @@
  * 
  **************************************************************************************************/
 
-#define BUCK_NO_OF_PHASES              1U ///< Number of power converter phases of this design
+#define BUCK_NO_OF_PHASES               1U ///< Number of power converter phases of this design
 
-#define BUCK_SWITCHING_FREQUENCY       (float)500.0e+3 ///< Fixed Switching frequency in [Hz]
-#define BUCK_PWM_DUTY_CYCLE_MIN        (float)  0.010  ///< Minimum on/off-time ratio (duty ratio) in [%]
-#define BUCK_PWM_DUTY_CYCLE_MAX        (float)  0.900  ///< Maximum on/off-time ratio (duty ratio) in [%]
-#define BUCK_LEADING_EDGE_BLANKING     (float)120.0e-9 ///< Leading Edge Blanking period in [sec]
-#define BUCK_DEAD_TIME_LEADING_EDGE    (float) 20.0e-9 ///< Leading Edge Dead Time delay in [sec]
-#define BUCK_DEAD_TIME_FALLING_EDGE    (float) 60.0e-9 ///< Falling Edge Dead Time delay in [sec]
+#define BUCK_SWITCHING_FREQUENCY        (float)500.0e+3 ///< Fixed Switching frequency in [Hz]
+#define BUCK_PWM_DUTY_CYCLE_MIN         (float)  0.010  ///< Minimum on/off-time ratio (duty ratio) in [%]
+#define BUCK_PWM_DUTY_CYCLE_MAX         (float)  0.900  ///< Maximum on/off-time ratio (duty ratio) in [%]
+#define BUCK_LEADING_EDGE_BLANKING      (float)120.0e-9 ///< Leading Edge Blanking period in [sec]
+#define BUCK_DEAD_TIME_LEADING_EDGE     (float) 20.0e-9 ///< Leading Edge Dead Time delay in [sec]
+#define BUCK_DEAD_TIME_FALLING_EDGE     (float) 60.0e-9 ///< Falling Edge Dead Time delay in [sec]
 
 /** @} */ // end of group pwm-settings-buck ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -654,9 +654,9 @@
 
     #define BUCK_ISNS_FEEDBACK_GAIN     (float) 1.000   ///< Current Gain in V/A
     #define BUCK_ISNS_MINIMUM           (float) 0.000   ///< absolute total minimum output current (average)
-    #define BUCK_ISNS_MAXIMUM           (float) 2.500   ///< absolute total maximum output current (average)
-    #define BUCK_ISNS_RELEASE           (float) 2.000   ///< current reset level after over current event
-    #define BUCK_ISNS_REFERENCE         (float) 2.000   ///< output current reference (average)
+    #define BUCK_ISNS_MAXIMUM           (float) 1.500   ///< absolute total maximum output current (average)
+    #define BUCK_ISNS_RELEASE           (float) 1.000   ///< current reset level after over current event
+    #define BUCK_ISNS_REFERENCE         (float) 1.000   ///< output current reference (average)
     #define BUCK_ISNS_ADC_TRG_DELAY     (float) 80.0e-9 ///< ADC trigger delay for current sense in [sec]
     #define BUCK_ISNS_FEEDBACK_OFFSET   (float) 0.000   ///< Current sense feedback offset (average)
 
