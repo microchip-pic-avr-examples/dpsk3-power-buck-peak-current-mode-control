@@ -68,7 +68,11 @@ volatile uint16_t appPowerSupply_Execute(void)
     buck.data.v_in = (BUCK_VIN_ADCBUF - BUCK_VIN_OFFSET);
     buck.data.temp = TEMP_ADCBUF;
     buck.data.i_sns[0] = BUCK_ISNS_ADCBUF;
-    
+    if (buck.data.control_output < 210)
+        buck.data.i_sns[0] = buck.data.control_output;
+    else
+        buck.data.i_sns[0] = (buck.data.control_output - 210);
+
     // Average inductor current value
     isns_samples += buck.data.i_sns[0];
     if(!(++_isns_sample_count & ISNS_AVG_BITMASK))
