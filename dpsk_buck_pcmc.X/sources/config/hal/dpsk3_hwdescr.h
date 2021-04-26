@@ -348,6 +348,7 @@
 #define BUCK_PWM_OUTPUT_SWAP        false ///< true = PWMxH is the leading PWM output, false = PWMxL is the leading PWM output
     
 #define BUCK_PWM_PDC                PG1DC    ///< PWM Instance Duty Cycle Register
+#define BUCK_PWM_IOCONL             PG1IOCONL ///< PWM Instance I/O Control Register
 #define BUCK_PWMH_TRIS              _TRISB14 ///< Device Port TRIS register
 #define BUCK_PWMH_WR                _LATB14  ///< Device Pin WRITE
 #define BUCK_PWMH_RD                _RB14    ///< Device Pin READ
@@ -661,6 +662,9 @@
 
     #define BUCK_ISNS_OFFSET_CALIBRATION_ENABLE  false      ///< Current Sense Offset Calibration is disabled 
 
+    #define BUCK_SYNCCTL_ON_THRESHOLD   (float) 0.250   ///< Phase Current above which the synchronous rectifier will be turned on
+    #define BUCK_SYNCCTL_OFF_THRESHOLD  (float) 0.200   ///< Phase Current below which the synchronous rectifier will be turned off
+
 #elif (BUCK_ISNS_OPTION == BUCK_ISNS_AMP)
 
     #define BUCK_ISNS_FEEDBACK_GAIN     (float) 0.600       ///< Current Gain in V/A
@@ -672,6 +676,9 @@
     #define BUCK_ISNS_FEEDBACK_OFFSET   (float) 1.650       ///< current sense #1 feedback offset (average)
 
     #define BUCK_ISNS_OFFSET_CALIBRATION_ENABLE true        ///< Current Sense Offset Calibration is disabled 
+
+    #define BUCK_SYNCCTL_ON_THRESHOLD   (float) 0.100   ///< Phase Current above which the synchronous rectifier will be turned on
+    #define BUCK_SYNCCTL_OFF_THRESHOLD  (float) 0.080   ///< Phase Current below which the synchronous rectifier will be turned off
 
 #endif
 
@@ -700,6 +707,10 @@
 #define BUCK_ISNS_NORM_INV_G    (float)(1.0/BUCK_ISNS_FEEDBACK_GAIN) ///< Inverted feedback gain required for value normalization
 #define BUCK_ISNS_NORM_SCALER   (int16_t)(ceil(log(BUCK_ISNS_NORM_INV_G)/log(2))) ///< ISNS normalization  
 #define BUCK_ISNS_NORM_FACTOR   (int16_t)((BUCK_ISNS_NORM_INV_G / pow(2.0, BUCK_ISNS_NORM_SCALER)) * (pow(2.0, 15)-1)) ///< ISNS normalization factor scaled in Q15
+
+#define BUCK_SYNCTHLD_ON        (uint16_t)(((BUCK_SYNCCTL_ON_THRESHOLD-BUCK_ISNS_FEEDBACK_OFFSET) * BUCK_ISNS_FEEDBACK_GAIN) / ADC_GRANULARITY) ///< Phase Current above which the synchronous rectifier will be turned on
+#define BUCK_SYNCTHLD_OFF       (uint16_t)(((BUCK_SYNCCTL_OFF_THRESHOLD-BUCK_ISNS_FEEDBACK_OFFSET) * BUCK_ISNS_FEEDBACK_GAIN) / ADC_GRANULARITY) ///< Phase Current below which the synchronous rectifier will be turned off
+
 
 /** @} */ // end of group phase-current-feedback-macros ~~~~~~~~~~~~~~~~~~~~~~~
 
