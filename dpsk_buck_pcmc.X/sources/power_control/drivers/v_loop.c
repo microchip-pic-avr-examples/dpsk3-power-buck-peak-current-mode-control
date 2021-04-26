@@ -16,7 +16,7 @@
  * CGS Date:            03/12/2021
  * *********************************************************************************
  * User:                M91406
- * Date/Time:           04/16/2021 12:48:11
+ * Date/Time:           04/25/2021 13:39:05
  * ********************************************************************************/
 
 #include "v_loop.h"
@@ -50,7 +50,7 @@ volatile uint16_t v_loop_ErrorHistory_size = (sizeof(v_loop_histories.ErrorHisto
  * Pole&Zero Placement:
  * *********************************************************************************
  *
- *    fP0:    734 Hz
+ *    fP0:    704 Hz
  *    fP1:    132540 Hz
  *    fZ1:    606 Hz
  *
@@ -66,9 +66,9 @@ volatile int32_t v_loop_ACoefficients [2] =
 
 volatile int32_t v_loop_BCoefficients [3] =
 {
-    0x46BBFFFF, // Coefficient B0 will be multiplied with error input e(n-0)
-    0x44AF0006, // Coefficient B1 will be multiplied with error input e(n-1)
-    0xB9CFFFFF  // Coefficient B2 will be multiplied with error input e(n-2)
+    0x43D7FFFF, // Coefficient B0 will be multiplied with error input e(n-0)
+    0x41E00006, // Coefficient B1 will be multiplied with error input e(n-1)
+    0xBCAEFFFF  // Coefficient B2 will be multiplied with error input e(n-2)
 };
 
 // Coefficient normalization factors

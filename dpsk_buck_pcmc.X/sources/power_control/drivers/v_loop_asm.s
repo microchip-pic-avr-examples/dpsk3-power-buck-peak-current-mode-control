@@ -2,7 +2,7 @@
 ;  SDK Version: PowerSmart™ Digital Control Library Designer v0.9.14.678
 ;  CGS Version: Code Generator Script v3.0.8 (03/12/2021)
 ;  Author:      M91406
-;  Date/Time:   04/16/2021 12:48:11
+;  Date/Time:   04/25/2021 13:39:05
 ; **********************************************************************************
 ;  2P2Z Control Library File (Fast Floating Point Coefficient Scaling Mode)
 ; **********************************************************************************
@@ -118,6 +118,11 @@
     cpslt w4, w6                            ; compare values and skip next instruction if control output is within operating range (control output < upper limit)
     mov w6, w4                              ; override most recent controller output
     V_LOOP_CLAMP_MAX_EXIT:
+    
+;------------------------------------------------------------------------------
+; Call user function before the most recent controller result is written to target
+    mov [w0 + #ptrExtHookPreTargetWriteFunction], w12 ; load function pointer to extern user function
+    call w12                                ; call function
     
 ;------------------------------------------------------------------------------
 ; Write control output value to target
@@ -275,6 +280,12 @@
     cpslt w4, w6                            ; compare values and skip next instruction if control output is within operating range (control output < upper limit)
     mov w6, w4                              ; override most recent controller output
     V_LOOP_PTERM_CLAMP_MAX_EXIT:
+    
+;------------------------------------------------------------------------------
+; Call user function before the most recent controller result is written to target
+    mov [w0 + #ptrExtHookPreTargetWriteFunction], w12 ; load function pointer to extern user function
+    mov [w0 + #ExtHookPreTargetWriteFunctionParam], w13 ; load single parameter or pointer to parameter data structure
+    call w12                                ; call function
     
 ;------------------------------------------------------------------------------
 ; Write control output value to target

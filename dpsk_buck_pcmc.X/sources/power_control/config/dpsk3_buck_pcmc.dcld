@@ -1,6 +1,6 @@
 [GUI]
 CreateDate=08/26/2020 14:07:37
-SaveDate=04/16/2021 12:50:59
+SaveDate=04/25/2021 14:43:23
 Name=PowerSmart™ Digital Control Library Designer
 Version=0.9.14.678
 VersionKey=914
@@ -8,7 +8,7 @@ AGS Version=2.0.23
 CGS Version=3.0.8
 WindowState=0
 Top=60
-Left=268
+Left=2188
 Height=930
 Width=1384
 TabHeight=288
@@ -107,14 +107,14 @@ AddAntiWindupMinimumClamping=1
 AddAntiWindupMinimumClampingStatusFlag=0
 AntiWindupEnableOutputSaturation=0
 AddPTermLoop=1
-AddUserHooks=0
+AddUserHooks=1
 AddUserHookStart=0
 AddUserHookStartParam=0
 AddUserHookSource=0
 AddUserHookSourceParam=0
 AddUserHookPreAntiWindup=0
 AddUserHookPreAntiWindupParam=0
-AddUserHookTarget=0
+AddUserHookTarget=1
 AddUserHookTargetParam=0
 AddUserHookStop=0
 AddUserHookStopParam=0
@@ -167,6 +167,7 @@ TriggerPlacement=1
 [SimulationToolSupport]
 SimplisSchematics=
 [generator_history]
-count=1
-active_item=1
+count=2
+active_item=2
 1=2021-04-15 00:01:34||M91406||Initial most stable 2P2Z controller setup, fx=15kHz, PM=60°, GM=-14dB||1; 3; 12; 0.5; 1; 0; 0; 500000; 734; 132540; 104860; 220000; 250000; 250000; 606; 3833; 49866; 50000; 50000; 1; 0; 0
+2=2021-04-25 13:00:10||M91406||Regenerated loop with active async control extension hook||1; 3; 12; 0.5; 1; 0; 0; 500000; 704; 132540; 104860; 220000; 250000; 250000; 606; 3833; 49866; 50000; 50000; 1; 0; 0
