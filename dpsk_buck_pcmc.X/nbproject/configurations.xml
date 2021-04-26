@@ -63,6 +63,7 @@
             <itemPath>sources/power_control/drivers/npnz16b.h</itemPath>
             <itemPath>sources/power_control/drivers/v_loop.h</itemPath>
             <itemPath>sources/power_control/drivers/npnz16b.inc</itemPath>
+            <itemPath>sources/power_control/drivers/v_loop_extensions.h</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f8" displayName="push_button" projectFiles="true">
