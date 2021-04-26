@@ -16,6 +16,7 @@
 
 #include "devices/dev_buck_converter.h"
 #include "drivers/v_loop.h"
+#include "drivers/v_loop_extensions.h"
 
 /*******************************************************************************
  * @ingroup app-layer-power-control-functions-private
@@ -66,7 +67,7 @@ volatile uint16_t appPowerSupply_ConverterObjectInitialize(void)
     buck.sw_node[0].gpio_low = BUCK_PWM_GPIO_PORT_PINL;
     buck.sw_node[0].swap_outputs = BUCK_PWM_OUTPUT_SWAP;
     buck.sw_node[0].master_period_enable = false;
-    buck.sw_node[0].sync_drive = false; 
+    buck.sw_node[0].sync_drive = true; 
     buck.sw_node[0].period = BUCK_PWM_PERIOD;
     buck.sw_node[0].phase = BUCK_PWM_PHASE_SHIFT;
     buck.sw_node[0].duty_ratio_min = BUCK_PWM_DC_MIN;
@@ -311,6 +312,11 @@ volatile uint16_t appPowerSupply_ControllerInitialize(void)
     buck.v_loop.controller->ADCTriggerControl.ptrADCTriggerBRegister = &BUCK_ISNS_ADCTRIG_PC;
     buck.v_loop.controller->ADCTriggerControl.ADCTriggerBOffset = BUCK_ISNS_ADC_TRGDLY; 
     
+    // Initialize Advanced Control Settings (not used in this code example)
+    buck.v_loop.controller->GainControl.AgcFactor = 0x7FFF; // Adaptive Gain Control factor fractional
+    buck.v_loop.controller->GainControl.AgcScaler = 0x0000; // Adaptive Gain Control factor bit-shift scaler
+    buck.v_loop.controller->GainControl.AgcMedian = 0x0000; // Q15 number representing normalized Nominal Operating Point
+
     // Data Provider Configuration
     buck.v_loop.controller->DataProviders.ptrDProvControlInput = &buck.data.control_input; 
     buck.v_loop.controller->DataProviders.ptrDProvControlInputCompensated = &buck.data.v_out; 
@@ -345,22 +351,17 @@ volatile uint16_t appPowerSupply_ControllerInitialize(void)
     buck.v_loop.controller->ExtensionHooks.ExtHookSourceFunctionParam = 0;
     buck.v_loop.controller->ExtensionHooks.ptrExtHookPreAntiWindupFunction = NULL;
     buck.v_loop.controller->ExtensionHooks.ExtHookPreAntiWindupFunctionParam = 0;
-    buck.v_loop.controller->ExtensionHooks.ptrExtHookPreTargetWriteFunction = NULL;
+    buck.v_loop.controller->ExtensionHooks.ptrExtHookPreTargetWriteFunction = (uint16_t)&buck_SyncRectControl;
     buck.v_loop.controller->ExtensionHooks.ExtHookPreTargetWriteFunctionParam = 0;
     buck.v_loop.controller->ExtensionHooks.ptrExtHookEndOfLoopFunction = NULL;
     buck.v_loop.controller->ExtensionHooks.ExtHookEndOfLoopFunctionParam = 0;
     buck.v_loop.controller->ExtensionHooks.ptrExtHookExitFunction = NULL;
     buck.v_loop.controller->ExtensionHooks.ExtHookExitFunctionParam = 0;
     
-    // Initialize Advanced Control Settings (not used in this code example)
-    buck.v_loop.controller->GainControl.AgcFactor = 0x7FFF; // Adaptive Gain Control factor fractional
-    buck.v_loop.controller->GainControl.AgcScaler = 0x0000; // Adaptive Gain Control factor bit-shift scaler
-    buck.v_loop.controller->GainControl.AgcMedian = 0x0000; // Q15 number representing normalized Nominal Operating Point
-
     // Custom Advanced Control Settings
-    buck.v_loop.controller->Advanced.usrParam0 = 0; // No additional advanced control options used
-    buck.v_loop.controller->Advanced.usrParam1 = 0; // No additional advanced control options used
-    buck.v_loop.controller->Advanced.usrParam2 = 0; // No additional advanced control options used
+    buck.v_loop.controller->Advanced.usrParam0 = (uint16_t)&BUCK_PWM_IOCONL; // Pointer to PGxIOCONL register to set override bits of sync switch
+    buck.v_loop.controller->Advanced.usrParam1 = BUCK_SYNCTHLD_ON; // threshold value turning on sync rectifier switch drive
+    buck.v_loop.controller->Advanced.usrParam2 = BUCK_SYNCTHLD_OFF; // threshold value turning off sync rectifier switch drive
     buck.v_loop.controller->Advanced.usrParam3 = 0; // No additional advanced control options used
     buck.v_loop.controller->Advanced.usrParam4 = 0; // No additional advanced control options used
     buck.v_loop.controller->Advanced.usrParam5 = 0; // No additional advanced control options used
