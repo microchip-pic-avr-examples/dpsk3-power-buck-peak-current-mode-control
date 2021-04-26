@@ -28,7 +28,7 @@
 ; to the active control loop data object
  
     .include "./sources/power_control/drivers/npnz16b.inc" ; include NPNZ16b_t object data structure value offsets and status flag labels
-    
+
 ;------------------------------------------------------------------------------
 ; source code section.
     .section .text                          ; place code in the text section
@@ -39,11 +39,11 @@
 ; application. Add a function call prototype to a C-header file to allow 
 ; calling this function from C-code.
 ;
-;        extern void __attribute__((near))my_function(void);
+;        extern void __attribute__((near)) buck_SyncRectControl(void);
 ;
 ;------------------------------------------------------------------------------
 
-    .global _my_function                  ; provide global scope to routine
+    .global _buck_SyncRectControl            ; provide global scope to routine
  
 ;------------------------------------------------------------------------------
 
@@ -52,46 +52,39 @@
 ;------------------------------------------------------------------------------
     
 ;------------------------------------------------------------------------------
-; MY FUNCTION is a simple function template, when used as a user extension 
-; function, this function will be directly called by a CALL Wn instruction
-; to minimize the function call overhead to 2 instruction cycles only. 
-; However, there is no context handling as it is assumed user extension
-; functions are commonly using the same data object as the main control loop.
-; Hence, all data is kept in its place just like this code would be part of
-; the main loop itself.
-;    
-; Please refer to the PS-DCLD User Guide for details about how to use this
-; feature, which working registers are in use by the main loop and which
-; can/may be used and/or manipulated by this routine.
+; Synchronous rectifier control sets and clears the current limit low-side
+; bit of the synchronous rectifier switch drive PWM channel depending on 
+; the most recent control output value. The sync rectifier control extension 
+; data structure supports two thresholds to apply some hysteresis between the 
+; turn-on and turn-off thresholds.
+; 
+; This function will be called from the standard control loop without 
+; context management. 
+; 
+; The following working registers are reserved and must not be used:
+; 
+;   - WREG2
+;   - WREG4
 ;
 ;------------------------------------------------------------------------------
 ; Start of routine
-_my_function:                               ; local function label (placeholder)
+_buck_SyncRectControl:                      ; local function label (placeholder)
     
     nop                                     ; place your code here
     nop
     nop
     
-    mov #0x88B8, w4
+    mov [w0 + usrParam0], w3
     
-    nop                                     ; place your code here
-    nop
-    nop
+    ; Check turn-on threshold
+    mov [w0 + #usrParam1], w6            ; load turn-on threshold value
+    cpslt w4, w6                         ; compare turn-on threshold against most recent control output
+    bset [w3], #4                        ; set current limit low-side bit preventing sync rectifier PWM drive signal from being generated
 
-    
-    lsr w4, w2
-    
-    ; Check for upper limit violation
-    mov [w0 + #MaxOutput], w6               ; load upper limit value
-    lsr w6, w3               ; load upper limit value, shifted one bit to the right
-    cpslt w2, w3                            ; compare values and skip next instruction if control output is within operating range (control output < upper limit)
-    mov w6, w4                              ; override controller output
-
-    ; Check for lower limit violation
-    mov [w0 + #MinOutput], w6               ; load lower limit value
-    lsr w6, w3               ; load upper limit value, shifted one bit to the right
-    cpsgt w2, w3                            ; compare values and skip next instruction if control output is within operating range (control output > lower limit)
-    mov w6, w4                              ; override controller output
+    ; Check turn-off threshold
+    mov [w0 + #usrParam2], w6            ; load turn-off threshold value
+    cpsgt w4, w6                         ; compare turn-off threshold against most recent control output
+    bclr [w3], #4                        ; clear current limit low-side bit allowing sync rectifier PWM drive signal to be generated
 
     
     
@@ -110,5 +103,5 @@ _my_function:                               ; local function label (placeholder)
 
      
 ; **********************************************************************************
-;  Download latest version of this tool here: https://areiter128.github.io/DCLD
+;  Download latest version of this tool here: https://microchip-pic-avr-tools.github.io/powersmart-dcld/
 ; **********************************************************************************
