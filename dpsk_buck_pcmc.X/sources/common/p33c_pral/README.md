@@ -1,34 +1,38 @@
-<p><a href="https://www.microchip.com" rel="nofollow"><img src="https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png" alt="Microchip Technology" style="max-width:100%;"></a></p>
+# dsPIC33C Peripheral Register Abstraction Layer (PRAL) Drivers
 
-Repo Name: p33c-peripheral-sfr-abstraction-drivers
+##### Special Function Register Abstraction Declarations and Low-Level Read/Write Functions
 
-## Set of dsPIC33C Peripheral Register Abstraction Layer (PRAL) Drivers
-**Special Funtion Register Abstraction Declarations and Low-Level Read/Write Functions**
+<span id="startDoc"> </span> <!-- start tag for internal references -->
 
-### Description:
+### Class
+PowerSmart™ Firmware Framework Component
+
+### Summary:
+
 Peripheral Special Function Register Abstraction Layer Drivers (PRAL) are used to provide a simple and direct way of accessing peripheral instances which are not known at compile time.
 These drivers provide an abstracted version of the dedicated register set of a peripheral type as data structure. Pointer based handlers are used to assign a generic data structure to a dedicated register set in user code which will get resolved at runtime.
 The API of these drivers provide simple low level access functions
 
-  - GetHandle(uint16_t Instance)  
-    Returns the memory address of the first register of the register set of a dedicated peripheral instance. Mapping this memory address to a user-defined peripheral register abstraction data structure allows direct access to each peripheral SFR and subsequently to its register bits. The peripheral registers are auto-extracted from the first instance of the peripheral from the XC16 device header file of the recently selected device making sure all supported register bits are properly represented.  
+- GetHandle(uint16_t Instance)  
+  Returns the memory address of the first register of the register set of a dedicated peripheral instance. Mapping this memory address to a user-defined peripheral register abstraction data structure allows direct access to each peripheral SFR and subsequently to its register bits. The peripheral registers are auto-extracted from the first instance of the peripheral from the XC16 device header file of the recently selected device making sure all supported register bits are properly represented.  
 <br>
 
-  - ConfigRead(uint16_t Instance)  
-	Returns a peripheral register abstraction data structure loaded with the recent register settings of the given peripheral instance. This function can be used to read and verify register contents or copy & paste configurations across register instances.  
+- ConfigRead(uint16_t Instance)  
+  Returns a peripheral register abstraction data structure loaded with the recent register settings of the given peripheral instance. This function can be used to read and verify register contents or copy & paste configurations across register instances.  
 <br>
 
-  - ConfigWrite(uint16_t Instance, P33C_xxx_SFR_t Config)  
-	Writes an initialized peripheral register abstraction data structure to a given peripheral instance. This allows quick loading of peripheral configuration templates from user-defined, pre-initialized peripheral SFR abstraction data structure objects.  
+- ConfigWrite(uint16_t Instance, P33C_xxx_SFR_t Config)  
+  Writes an initialized peripheral register abstraction data structure to a given peripheral instance. This allows quick loading of peripheral configuration templates from user-defined, pre-initialized peripheral SFR abstraction data structure objects.  
 <br>
 
+### Usage Examples:
 
-### Usage Examples:  
 Different Peripheral Register Macro Abstraction drivers may have different functions, depending on the architecture and structure of the peripheral registers. However, each of them has at least the three fundamental functions GetHandle, ConfigRead and ConfigWrite.
 
 The following code examples for the high-speed PWM driver show how these three fundamental functions are used. 
 
 #### a) GetHandle(uint16_t Instance) Example
+
 This example declares a generic PWM generator register pointer object which gets assigned to the dedicated PWM generator #3. After the assignment the generic data structure object is used to directly read from/write to the SFRs of the dedicated high-speed PWM generator. 
 These read/write operations are equivalent to hard-coded register manipulation instructions but are now mappable to any PWM generator available without having to change/refactor user code.
 

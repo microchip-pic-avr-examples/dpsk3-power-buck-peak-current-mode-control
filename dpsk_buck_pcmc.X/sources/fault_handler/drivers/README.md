@@ -1,11 +1,13 @@
 # Fault Handler Function Driver
 
-<span id="startDoc"> </span> <!-- start tag for internal references -->
+<span id="startDoc"><a name="startDoc"></a></span> <!-- start tag for internal references -->
 
 ### Class
+
 PowerSmart™ Firmware Framework Component
 
 ### Summary
+
 Generic fault handler supporting comparison of static and dynamic data with automated fault trip and release function hooks. It further provides interrupt service routines for uninterruptible interrupts (traps) and a trap logger, capturing the status of CPU registers at the time when an uninterruptible interrupt is triggered (e.g. divide-by-zero, address error, oscillator failure, etc.). 
 
 ### Table Of Contents
@@ -17,7 +19,7 @@ Generic fault handler supporting comparison of static and dynamic data with auto
 - [History](#history)
 
 
-<span id="intro"> </span>
+<span id="intro"><a name="intro"></a></span>
 ### Introduction
 
 #### Description
@@ -54,7 +56,7 @@ The numbers n and m used for triggering/clearing a fault condition is set as par
 
 [[back](#startDoc)]
 
-<span id="lib_use"> </span>
+<span id="lib_use"><a name="lib_use"></a></span>
 ### Library Usage Guidance
 
 This code library repository must be included in an independent directory within the target project. Changes to any of the files of this repository in the target project environment can be pushed back to this library repository from where these changes can be distributed to one, more or all target projects this library has been used in. The upgrade of library files in a particular target project needs to be performed individually, allowing to individually manage the device driver version used.
@@ -113,7 +115,7 @@ with `<code_library_target>` = path to sub-folder within the target project dire
 
 [[back](#startDoc)]
 
-<span id="api_guide"> </span>
+<span id="api_guide"><a name="api_guide"></a></span>
 ### API Quick-Start Guide
 
 #### API Public Functions
@@ -140,7 +142,7 @@ In this version the trap handler allows to treat DSP accumulator saturation even
 
 [[back](#startDoc)]
 
-<span id="api_objects"> </span>
+<span id="api_objects"><a name="api_objects"></a></span>
 #### API Public Data Objects
 
 ##### 1) Fault Handler
@@ -392,7 +394,7 @@ typedef struct CPU_RCON_s
 [[back](#startDoc)]
 
 ---
-<span id="history"> </span>
+<span id="history"><a name="history"></a></span>
 ##### History:
 * 03/13/2020 v1.0 (M91406) Initial release
 * 11/02/2020 v2.0 (M91406) Enhanced version with generic trap handler
