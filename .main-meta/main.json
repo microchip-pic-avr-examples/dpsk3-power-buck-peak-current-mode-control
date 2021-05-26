@@ -6,7 +6,7 @@
       "name":"com.microchip.mplabx.project.dpsk3-power-buck-peak-current-mode-control",
       "version":"1.0.0",
       "displayName":"DPSK3 Synchronous Buck Converter Peak Current Mode Control",
-      "projectName":"dpsk3-power-buck-voltage-mode-control",
+      "projectName":"dpsk3-power-buck-peak-current-mode-control",
       "shortDescription":"Digital control loop implementation of a simple peak current mode controller regulating the output voltage of a synchronous buck converter",
       "ide":{
          "name":"MPLABX",

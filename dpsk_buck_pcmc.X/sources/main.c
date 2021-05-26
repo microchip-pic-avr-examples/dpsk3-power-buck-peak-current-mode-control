@@ -183,6 +183,7 @@ volatile uint16_t sysHighPriorityTasks_Execute(void)
 
 /**********************************************************************************
  * @fn     void _OsTimerInterrupt(void)
+ * @ingroup main-loop-high-priority
  * @brief  High priority task sequence executed on a fixed 100us pace
  * 
  * @details
