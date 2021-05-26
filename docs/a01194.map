@@ -1,0 +1,28 @@
+<map id="BUCK_CONVERTER_DATA_s" name="BUCK_CONVERTER_DATA_s">
+<area shape="rect" id="node1" title="Publicly accessible data buffer of most recent runtime data values." alt="" coords="2603,5,2803,185"/>
+<area shape="rect" id="node2" href="$a01236.html" title="BUCK control &amp; monitoring data structure." alt="" coords="2625,248,2784,325"/>
+<area shape="rect" id="node3" href="$a01164.html" title="Generic power controller status word." alt="" coords="2987,447,3203,671"/>
+<area shape="rect" id="node4" href="$a01212.html" title="Switching signal timing settings." alt="" coords="3130,821,3373,1045"/>
+<area shape="rect" id="node5" href="$a01208.html" title="Peak Current Mode Control Slope Compensation Settings." alt="" coords="3340,454,3579,663"/>
+<area shape="rect" id="node6" href="$a01204.html" title="User defined settings for control loops;." alt="" coords="1855,461,2040,656"/>
+<area shape="rect" id="node18" href="$a01224.html" title="Buck converter feedback declarations." alt="" coords="3603,520,3823,597"/>
+<area shape="rect" id="node21" href="$a01176.html" title="data structure for the buck statement ID for sub&#45;operating and operating states" alt="" coords="2270,491,2409,627"/>
+<area shape="rect" id="node22" href="$a01232.html" title="GPIO instance of the converter control GPIO." alt="" coords="2065,520,2246,597"/>
+<area shape="rect" id="node24" href="$a01200.html" title="Generic power controller control settings." alt="" coords="2683,498,2913,619"/>
+<area shape="rect" id="node25" href="$a01192.html" title="Power Converter Startup Timing Settings." alt="" coords="2433,520,2659,597"/>
+<area shape="rect" id="node7" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="975,248,1066,325"/>
+<area shape="rect" id="node8" href="$a01272.html" title="Automatic ADC trigger placement parameters for primary ADC trigger A and secondary trigger B." alt="" coords="1457,498,1629,619"/>
+<area shape="rect" id="node9" href="$a01284.html" title="Data structure holding parameters required for adaptive or manual loop gain manipulation during runti..." alt="" coords="1654,498,1830,619"/>
+<area shape="rect" id="node10" href="$a01268.html" title="Data strucure holding control output clamping threshold values." alt="" coords="906,498,1023,619"/>
+<area shape="rect" id="node11" href="$a01288.html" title="Generic data buffer for undetermined use. These data buffers may be used by advanced control algorith..." alt="" coords="1047,469,1261,649"/>
+<area shape="rect" id="node12" href="$a01260.html" title="Data structure merging all defined controller input and output ports." alt="" coords="1285,520,1433,597"/>
+<area shape="rect" id="node14" href="$a01264.html" title="Data structure for filter parameters such as pointer to history and coefficient arrays and number sca..." alt="" coords="5,425,188,693"/>
+<area shape="rect" id="node15" href="$a01276.html" title="Automated data provider pointers used to push most recent data points to user&#45;defined variables." alt="" coords="213,498,445,619"/>
+<area shape="rect" id="node16" href="$a01280.html" title="Set of function pointers and parameters used to tie in user&#45;defined, external extension functions at ..." alt="" coords="469,403,690,715"/>
+<area shape="rect" id="node17" href="$a01244.html" title="Controller status word data structure allowing bit&#45;wise access to status and control bits." alt="" coords="715,447,881,671"/>
+<area shape="rect" id="node13" href="$a01256.html" title="Data structure defining parameters of a controller input or output port." alt="" coords="1305,873,1417,994"/>
+<area shape="rect" id="node19" href="$a01220.html" title="ADC input channel configuration." alt="" coords="3603,821,3823,1045"/>
+<area shape="rect" id="node20" href="$a01216.html" title="ADC input signal scaling = (ADCBUF &#45; &lt;offset&gt;) * &lt;factor&gt; &gt;&gt; 2^&lt;scaler&gt;" alt="" coords="3605,1108,3818,1215"/>
+<area shape="rect" id="node23" href="$a01228.html" title="GPIO instance of the converter control GPIO." alt="" coords="2065,865,2248,1001"/>
+<area shape="rect" id="node26" href="$a01188.html" title="Generic power controller startup period settings." alt="" coords="2456,865,2636,1001"/>
+</map>

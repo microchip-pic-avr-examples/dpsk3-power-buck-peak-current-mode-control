@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="5,208,96,235"/>
+<area shape="rect" id="node2" href="$a01272.html" title="Automatic ADC trigger placement parameters for primary ADC trigger A and secondary trigger B." alt="" coords="166,5,335,32"/>
+<area shape="rect" id="node3" href="$a01276.html" title="Automated data provider pointers used to push most recent data points to user&#45;defined variables." alt="" coords="153,56,348,83"/>
+<area shape="rect" id="node4" href="$a01280.html" title="Set of function pointers and parameters used to tie in user&#45;defined, external extension functions at ..." alt="" coords="149,107,352,133"/>
+<area shape="rect" id="node5" href="$a01264.html" title="Data structure for filter parameters such as pointer to history and coefficient arrays and number sca..." alt="" coords="159,157,342,184"/>
+<area shape="rect" id="node6" href="$a01284.html" title="Data structure holding parameters required for adaptive or manual loop gain manipulation during runti..." alt="" coords="163,208,339,235"/>
+<area shape="rect" id="node7" href="$a01268.html" title="Data strucure holding control output clamping threshold values." alt="" coords="192,259,309,285"/>
+<area shape="rect" id="node8" href="$a01260.html" title="Data structure merging all defined controller input and output ports." alt="" coords="190,309,311,336"/>
+<area shape="rect" id="node10" href="$a01244.html" title="Controller status word data structure allowing bit&#45;wise access to status and control bits." alt="" coords="187,360,314,387"/>
+<area shape="rect" id="node11" href="$a01288.html" title="Generic data buffer for undetermined use. These data buffers may be used by advanced control algorith..." alt="" coords="144,411,357,437"/>
+<area shape="rect" id="node9" href="$a01256.html" title="Data structure defining parameters of a controller input or output port." alt="" coords="405,309,517,336"/>
+</map>

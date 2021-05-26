@@ -1,0 +1,52 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Application main function executed after device comes out of RESET." alt="" coords="5,871,56,897"/>
+<area shape="rect" id="node2" href="$a00353.html#gaa1ec8154dbf983b02b3b2dc186c5079d" title="Low priority task sequence executed after the high priority task sequence execution is complete." alt="" coords="112,794,255,835"/>
+<area shape="rect" id="node10" href="$a00365.html#ga4c811c3414a3785423f828be293562f0" title=" " alt="" coords="114,871,253,897"/>
+<area shape="rect" id="node11" href="$a00356.html#ga12ce46460ff0657fc879f5b23ed8ccb1" title="Initializes essential chip resources." alt="" coords="118,943,249,969"/>
+<area shape="rect" id="node18" href="$a00361.html#ga70c5cba054e38a4e8c8285a187ff61fa" title="Initializes the user&#45;defined chip resources." alt="" coords="116,1189,251,1230"/>
+<area shape="rect" id="node31" href="$a00366.html#ga2be64f5f0b9a2c0c6713f5a69d793e05" title="Initializes the user&#45;defined tasks." alt="" coords="104,500,263,527"/>
+<area shape="rect" id="node3" href="$a00482.html#gacd8e3f8ca8af94f13f7efa0df7ced6f5" title="Refreshes the LC display." alt="" coords="337,740,460,767"/>
+<area shape="rect" id="node7" href="$a00497.html#gaaa8c86cbd692a090f955022c93593a68" title="Executes the debugging LED driver." alt="" coords="337,791,460,817"/>
+<area shape="rect" id="node8" href="$a00552.html#gac8eaed20cfb248e14fe71e45483203f7" title="Executes the USER push button monitor." alt="" coords="315,841,482,868"/>
+<area shape="rect" id="node4" href="$a00487.html#ga24701a4c3ae760e7e0b9c70d93370ff3" title="Sets the cursor position to the given x&#45; and y&#45;coordinates and writes the given string on the lcd scr..." alt="" coords="566,740,723,767"/>
+<area shape="rect" id="node5" href="$a00487.html#ga5c431635cb94750b2f6e938d7f1f0cf1" title="Sets the cursor position to the given x&#45; and y&#45;coordinates." alt="" coords="813,715,933,741"/>
+<area shape="rect" id="node6" href="$a00487.html#gac07de05132918ca2db8cf4492819eca6" title="Writes a complete string on the LCD screen." alt="" coords="803,765,944,792"/>
+<area shape="rect" id="node9" href="$a00557.html#ga29d5123115f34320a92fabc8be2f796c" title="Initializes the push button device driver." alt="" coords="561,841,729,868"/>
+<area shape="rect" id="node12" href="$a00357.html#ga3f3f3c22c6c2b95518271fae8f58b03f" title="Initializes the auxiliary clock of the device." alt="" coords="337,993,460,1020"/>
+<area shape="rect" id="node14" href="$a00359.html#gae104c8e1fd4160f749fefbcf540f5a07" title="Digital Signal Processor initialization." alt="" coords="339,1044,459,1071"/>
+<area shape="rect" id="node15" href="$a00357.html#ga40d0188218fbc4f682cbddffff9e1269" title="System oscillator initialization." alt="" coords="335,892,462,919"/>
+<area shape="rect" id="node17" href="$a00358.html#ga79cb6e309797560a9a262a562fe40fee" title="Resets the device input/output pins to digital inputs." alt="" coords="337,943,461,969"/>
+<area shape="rect" id="node13" href="$a00385.html#gab06b90f28b398245a399304dde2c1576" title="Initializes the auxiliary clock and its PLL module step by step in software. Each step is tested and ..." alt="" coords="536,993,753,1020"/>
+<area shape="rect" id="node16" href="$a00385.html#ga110faf14914c3a8ebb3a4c1486aefb9d" title="Initializes the major oscillator and the PLL module step by step by using clock switching in software..." alt="" coords="547,892,742,919"/>
+<area shape="rect" id="node19" href="$a00362.html#gab420e63336f317e197b1cb8861561c3f" title="DAC Module Base Register Initialization." alt="" coords="317,1095,480,1121"/>
+<area shape="rect" id="node23" href="$a00362.html#ga2f97c3082e0d6f724cea482c10c2d08f" title=" " alt="" coords="323,1145,475,1172"/>
+<area shape="rect" id="node25" href="$a00362.html#ga231ffdd65b0ae520b467cbc6fbbf8d03" title="Initializes a user specified DAC instance with DAC output enabled." alt="" coords="319,1196,478,1223"/>
+<area shape="rect" id="node27" href="$a00363.html#gaf4c74cf390185b49d99838e0f9885076" title="Initializes the on&#45;chip operational amplifier module." alt="" coords="328,1297,469,1324"/>
+<area shape="rect" id="node29" href="$a00363.html#ga3cd080c9a48a5d74d8b2f89fdec161da" title="Enables the on&#45;chip operational amplifier module." alt="" coords="311,1348,487,1375"/>
+<area shape="rect" id="node30" href="$a00363.html#ga4dbd2367ecd449226460b0b0a52cbe8b" title="Resets the on&#45;chip operational amplifier module." alt="" coords="313,1247,484,1273"/>
+<area shape="rect" id="node20" href="$a00381.html#gaddf7b491a947c7f557b89235588c0219" title="Writes a user&#45;defined configuration to the DAC module base registers." alt="" coords="547,1044,743,1071"/>
+<area shape="rect" id="node21" href="$a00381.html#gaf0ea62728fde73f2119e47f67baf2ff0" title="Resets all DAC Module registers to their RESET default values." alt="" coords="557,1095,733,1121"/>
+<area shape="rect" id="node22" href="$a00381.html#ga72e7cdf4177d0403e8ff925314ec1bc7" title="Gets pointer to DAC Module SFR set." alt="" coords="549,1145,740,1172"/>
+<area shape="rect" id="node24" href="$a00381.html#gac98f16c744b3712654c1bbb58acb4e33" title="Gets pointer to DAC Instance SFR set." alt="" coords="546,1196,743,1223"/>
+<area shape="rect" id="node26" href="$a00381.html#ga39037bccfba783fdd8c9a52cbe651ca4" title="Resets all DAC Instance registers to their RESET default values." alt="" coords="553,1247,736,1273"/>
+<area shape="rect" id="node28" href="$a00384.html#gacaacda32efbc1383f62de2ba1bb95a34" title="Gets pointer to op&#45;amp Module SFR set." alt="" coords="549,1297,740,1324"/>
+<area shape="rect" id="node32" href="$a00466.html#ga830e5c7087a8e5ee8ea39b7e3df94b68" title="Initialization of user&#45;defined fault objects." alt="" coords="314,351,483,377"/>
+<area shape="rect" id="node37" href="$a00482.html#gab93992748ced72fdc2989d0b0f369e54" title="Initializes the LC display." alt="" coords="337,689,460,716"/>
+<area shape="rect" id="node39" href="$a00497.html#ga900c95201f101cb3c8644bcf7aab8af9" title="Initializes the LED driving GPIO." alt="" coords="337,551,460,577"/>
+<area shape="rect" id="node40" href="$a00502.html#ga7a4cf6371d09457539f96a74b2809ca0" title="Calls the application layer power controller initialization." alt="" coords="312,500,485,527"/>
+<area shape="rect" id="node45" href="$a00552.html#ga7c903bd2ce5b08d78de218d726830947" title="Initializes the USER push button on DPSK3." alt="" coords="316,107,481,133"/>
+<area shape="rect" id="node50" href="$a00365.html#ga8e89a1a4ee5bf8c794bd29163b92bf49" title="Initializes the timer used as time&#45;base for the task scheduler." alt="" coords="325,300,472,327"/>
+<area shape="rect" id="node33" href="$a00468.html#ga54f9db91ea0782b08aa16ee77a57c5e5" title="Initializes the user&#45;defined fault objects for overcurrent protection." alt="" coords="581,325,708,352"/>
+<area shape="rect" id="node34" href="$a00468.html#gade437244e8f6e5ff7c57a73442063350" title="Initializes the user&#45;defined fault objects for overvoltage lockout." alt="" coords="581,376,708,403"/>
+<area shape="rect" id="node35" href="$a00468.html#ga82dc317e3adac0308e5ac3f5ad321605" title="Initializes the user&#45;defined fault objects for regulation error." alt="" coords="575,224,714,251"/>
+<area shape="rect" id="node36" href="$a00468.html#ga9441220f8a7d4a6805467d04b734e6b5" title="Initializes the user&#45;defined fault objects for under&#45;voltage lockout." alt="" coords="581,275,708,301"/>
+<area shape="rect" id="node38" href="$a00487.html#ga5d8f09855e28846e87400692d186781a" title="Initializes the LCD Device." alt="" coords="583,689,706,716"/>
+<area shape="rect" id="node41" href="$a00505.html#ga0b4cabdb02c8c9ea94ea1dfa39de3764" title="This function initializes the control system feedback loop objects." alt="" coords="554,623,735,665"/>
+<area shape="rect" id="node42" href="$a00505.html#gad0f6ff4894bf23722884c60bbcdcacd0" title="This function initializes the buck converter device driver instance." alt="" coords="555,427,735,469"/>
+<area shape="rect" id="node43" href="$a00505.html#ga0b26acfec74d1804384b4ba1a3cffab4" title="This function is used to load peripheral configuration templates from the power controller device dri..." alt="" coords="549,493,740,534"/>
+<area shape="rect" id="node44" href="$a00509.html#ga86289c82938655142075e84ac90aa603" title="This function starts the buck converter." alt="" coords="580,558,709,599"/>
+<area shape="rect" id="node46" href="$a00554.html#ga3966fddf4ec29e64c6d51a93eee8706f" title="Push button event raised at the &quot;pressed&quot; transition." alt="" coords="535,107,755,133"/>
+<area shape="rect" id="node47" href="$a00554.html#ga6192986e06dbca144461c0315a2a100f" title="Push button event raised at the &quot;is long pressed&quot; detection." alt="" coords="551,158,739,199"/>
+<area shape="rect" id="node48" href="$a00554.html#ga13f736396ad1222ff5cbe35947bd60ac" title="Push button event raised at the &quot;not pressed&quot; transition." alt="" coords="543,5,747,32"/>
+<area shape="rect" id="node49" href="$a00557.html#gaa3ce9c320a37ebc6e1ae113c82e68747" title="Initializes the push button device driver." alt="" coords="561,56,728,83"/>
+</map>

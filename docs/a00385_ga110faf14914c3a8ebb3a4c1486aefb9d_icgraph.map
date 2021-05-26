@@ -1,0 +1,6 @@
+<map id="p33c_OscFrc_DefaultInitialize" name="p33c_OscFrc_DefaultInitialize">
+<area shape="rect" id="node1" title="Initializes the major oscillator and the PLL module step by step by using clock switching in software..." alt="" coords="457,5,652,32"/>
+<area shape="rect" id="node2" href="$a00357.html#ga40d0188218fbc4f682cbddffff9e1269" title="System oscillator initialization." alt="" coords="283,5,409,32"/>
+<area shape="rect" id="node3" href="$a00356.html#ga12ce46460ff0657fc879f5b23ed8ccb1" title="Initializes essential chip resources." alt="" coords="104,5,235,32"/>
+<area shape="rect" id="node4" href="$a00350.html#ga840291bc02cba5474a4cb46a9b9566fe" title="Application main function executed after device comes out of RESET." alt="" coords="5,5,56,32"/>
+</map>

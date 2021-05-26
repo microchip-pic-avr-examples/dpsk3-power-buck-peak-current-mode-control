@@ -1,0 +1,8 @@
+<map id="buckPWM_Start" name="buckPWM_Start">
+<area shape="rect" id="node1" title="This function enables the buck PWM operation." alt="" coords="709,31,828,57"/>
+<area shape="rect" id="node2" href="$a00509.html#ga86289c82938655142075e84ac90aa603" title="This function starts the buck converter." alt="" coords="532,23,661,65"/>
+<area shape="rect" id="node3" href="$a00502.html#ga7a4cf6371d09457539f96a74b2809ca0" title="Calls the application layer power controller initialization." alt="" coords="311,5,484,32"/>
+<area shape="rect" id="node6" href="$a00502.html#ga9210070749c2ed49abd8a30b27f64151" title="This function calls the buck converter device driver function starting the power supply." alt="" coords="320,56,475,83"/>
+<area shape="rect" id="node4" href="$a00366.html#ga2be64f5f0b9a2c0c6713f5a69d793e05" title="Initializes the user&#45;defined tasks." alt="" coords="104,5,263,32"/>
+<area shape="rect" id="node5" href="$a00350.html#ga840291bc02cba5474a4cb46a9b9566fe" title="Application main function executed after device comes out of RESET." alt="" coords="5,5,56,32"/>
+</map>
