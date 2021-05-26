@@ -200,9 +200,9 @@ volatile uint16_t buckPWM_ChannelInitialize(volatile struct BUCK_CONVERTER_s* bu
             pg->PGxEVTH.bits.ADTR2EN2 = true; // Use PGxTRIGB as PWM trigger #2
             pg->PGxTRIGA.value  = buckInstance->sw_node[_i].slope_compensation.slope_start_trigger;
             pg->PGxTRIGB.value  = buckInstance->sw_node[_i].slope_compensation.slope_stop_trigger;
-            pg->PGxCLPCIL.value = REG_PGxCLPCILPC;  // Load PCI configuration template of Current Limit PCI Low Register
-            pg->PGxCLPCIH.value = REG_PGxCLPCIHPC;  // Load PCI configuration template of Current Limit PCI High Register
-            pg->PGxCLPCIL.bits.PSS = buckInstance->sw_node[_i].slope_compensation.pwm_trigger_input;
+            pg->PGxFFPCIL.value = REG_PGxyPCILPC;  // Load PCI configuration template of Current Limit PCI Low Register
+            pg->PGxFFPCIH.value = REG_PGxyPCIHPC;  // Load PCI configuration template of Current Limit PCI High Register
+            pg->PGxFFPCIL.bits.PSS = buckInstance->sw_node[_i].slope_compensation.pwm_trigger_input;
             pg->PGxIOCONL.value = REG_PGxIOCONLPC; // Load IO configuration template for peak current mode control
             
         }
