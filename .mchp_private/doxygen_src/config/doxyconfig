@@ -29,6 +29,7 @@ PROJECT_BRIEF       = "dsPIC33C Buck Converter Peak Current Mode Control Example
 #	 Note: If this tag is empty the current directory is searched.
 
 INPUT               += ../../../dpsk_buck_pcmc.X/sources
+INPUT               += ../../../README.md
 
 # b) Include File Path Reference 
 #
