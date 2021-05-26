@@ -1,0 +1,5 @@
+<map id="NPNZ_PORTS_s" name="NPNZ_PORTS_s">
+<area shape="rect" id="node1" title="Data structure merging all defined controller input and output ports." alt="" coords="5,248,153,384"/>
+<area shape="rect" id="node3" href="$a01256.html" title="Data structure defining parameters of a controller input or output port." alt="" coords="23,432,135,553"/>
+<area shape="rect" id="node2" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="9,5,150,200"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="sysAclk_Initialize" name="sysAclk_Initialize">
+<area shape="rect" id="node1" title="Initializes the auxiliary clock of the device." alt="" coords="283,5,405,32"/>
+<area shape="rect" id="node2" href="$a00356.html#ga12ce46460ff0657fc879f5b23ed8ccb1" title="Initializes essential chip resources." alt="" coords="104,5,235,32"/>
+<area shape="rect" id="node3" href="$a00350.html#ga840291bc02cba5474a4cb46a9b9566fe" title="Application main function executed after device comes out of RESET." alt="" coords="5,5,56,32"/>
+</map>

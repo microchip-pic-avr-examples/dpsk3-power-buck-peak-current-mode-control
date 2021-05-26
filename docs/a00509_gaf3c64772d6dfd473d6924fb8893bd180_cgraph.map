@@ -1,0 +1,21 @@
+<map id="drv_BuckConverter_Initialize" name="drv_BuckConverter_Initialize">
+<area shape="rect" id="node1" title="This function initializes all peripheral modules and their instances used by the power controller." alt="" coords="5,99,135,141"/>
+<area shape="rect" id="node2" href="$a00532.html#gac2bfd6c3ccd9ec11b8e91322ea9354d2" title="This function initializes the settings for the ADC channel." alt="" coords="185,5,364,32"/>
+<area shape="rect" id="node3" href="$a00532.html#ga44f537d9ad5dcb0e744480802cfbf170" title="This fucntion initializes the buck by resetting all its registers to default." alt="" coords="188,56,361,83"/>
+<area shape="rect" id="node4" href="$a00532.html#gac7e5924475733c189b2318844ae01844" title="This function initializes the buck input pins." alt="" coords="207,107,343,133"/>
+<area shape="rect" id="node8" href="$a00532.html#ga45a54def97cc67eb8d36e22a3867d95f" title="This function initializes the output pins for the PWM output and the default buck PWM settings." alt="" coords="183,208,367,235"/>
+<area shape="rect" id="node17" href="$a00532.html#ga6d12fd9e2f1d4f01ec6db21454693863" title="Initializes the buck PWM module by resetting its registers to default." alt="" coords="185,416,364,443"/>
+<area shape="rect" id="node5" href="$a00532.html#ga7f1d554e08d756b8677b572216908a3a" title="This function clears the selected general purpose input/output pin." alt="" coords="457,31,575,57"/>
+<area shape="rect" id="node7" href="$a00532.html#ga3d3f91c0e40884874e7df3a67fff23f3" title="This function sets the pin as input or output." alt="" coords="429,81,603,108"/>
+<area shape="rect" id="node6" href="$a00383.html#ga4d67af688d8f7f911d79107974e11e6b" title="Gets pointer to GPIO Instance SFR set." alt="" coords="697,51,831,93"/>
+<area shape="rect" id="node9" href="$a00532.html#ga91be1e9c6cefeb362af454e71869d042" title="This function initializes the Digital&#45;To&#45;Analog converter, slope compensation and analog comparator u..." alt="" coords="427,183,605,209"/>
+<area shape="rect" id="node12" href="$a00532.html#gaaabec2f1ada3085513665d34125a7291" title="This function initializes the Digital&#45;To&#45;Analog converter peripheral module." alt="" coords="429,233,603,260"/>
+<area shape="rect" id="node15" href="$a00387.html#gab66f225bac6b132d1418a4c808e3babb" title="Disposes a given PWM generator by resetting all its registers to default." alt="" coords="445,285,587,326"/>
+<area shape="rect" id="node16" href="$a00387.html#ga55e525c7ac54a365ab6dad558ec17f0b" title="Returns the PWM generator index." alt="" coords="445,350,587,391"/>
+<area shape="rect" id="node10" href="$a00381.html#gac471660aeec8e8329369435914c5befa" title="Writes a user&#45;defined configuration to the DAC instance registers." alt="" coords="678,117,850,158"/>
+<area shape="rect" id="node11" href="$a00381.html#gac98f16c744b3712654c1bbb58acb4e33" title="Gets pointer to DAC Instance SFR set." alt="" coords="665,183,863,209"/>
+<area shape="rect" id="node13" href="$a00381.html#gaddf7b491a947c7f557b89235588c0219" title="Writes a user&#45;defined configuration to the DAC module base registers." alt="" coords="666,233,862,260"/>
+<area shape="rect" id="node14" href="$a00381.html#ga72e7cdf4177d0403e8ff925314ec1bc7" title="Gets pointer to DAC Module SFR set." alt="" coords="669,284,859,311"/>
+<area shape="rect" id="node18" href="$a00387.html#ga8075fd40f867be8f42bb806622bd91bd" title="Writes a user&#45;defined configuration to the PWM base module registers." alt="" coords="415,416,617,443"/>
+<area shape="rect" id="node19" href="$a00387.html#ga3ed5f08051a70f5cb426b8254119845f" title="Gets pointer to PWM module SFR set." alt="" coords="418,467,614,493"/>
+</map>

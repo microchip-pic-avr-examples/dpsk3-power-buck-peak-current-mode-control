@@ -1,0 +1,7 @@
+var a00423 =
+[
+    [ "BUCK_DAC_SLOPE_START_DELAY", "a00423.html#ga43529befe56b7dcb4e5e2d02a26c4b96", null ],
+    [ "BUCK_DAC_SLOPE_STOP_DELAY", "a00423.html#ga1ec466186de606f0d843ba2c15b71fb8", null ],
+    [ "BUCK_DAC_VOLTAGE_INITIAL", "a00423.html#gaf6f5570238b1467c1a2215a62be73d78", null ],
+    [ "BUCK_SLOPE_COMP_SLEW_RATE", "a00423.html#ga68f00c9624a2500cd2277de8437906b2", null ]
+];

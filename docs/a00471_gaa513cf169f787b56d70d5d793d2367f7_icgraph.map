@@ -1,0 +1,5 @@
+<map id="drv_FaultHandler_CheckObject" name="drv_FaultHandler_CheckObject">
+<area shape="rect" id="node1" title="Check current fault status of a user&#45;defined fault object." alt="" coords="417,13,617,39"/>
+<area shape="rect" id="node2" href="$a00466.html#ga8842f6a41fe23f932a8864fc140c4b5b" title="Application wide fault object monitoring routine." alt="" coords="199,13,369,39"/>
+<area shape="rect" id="node3" href="$a00354.html#ga8dc4b233e7fa6fe932be5e8d5a2b19e3" title="High priority task sequence executed at a fixed repetition frequency." alt="" coords="5,5,151,47"/>
+</map>

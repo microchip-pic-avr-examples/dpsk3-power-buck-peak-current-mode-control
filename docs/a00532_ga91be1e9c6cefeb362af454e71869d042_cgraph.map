@@ -1,0 +1,5 @@
+<map id="buckDAC_ChannelInitialize" name="buckDAC_ChannelInitialize">
+<area shape="rect" id="node1" title="This function initializes the Digital&#45;To&#45;Analog converter, slope compensation and analog comparator u..." alt="" coords="5,42,184,69"/>
+<area shape="rect" id="node2" href="$a00381.html#gac471660aeec8e8329369435914c5befa" title="Writes a user&#45;defined configuration to the DAC instance registers." alt="" coords="245,5,417,47"/>
+<area shape="rect" id="node3" href="$a00381.html#gac98f16c744b3712654c1bbb58acb4e33" title="Gets pointer to DAC Instance SFR set." alt="" coords="232,71,429,98"/>
+</map>

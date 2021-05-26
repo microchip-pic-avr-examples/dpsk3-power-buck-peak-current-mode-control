@@ -1,0 +1,6 @@
+<map id="drv_BuckConverter_Resume" name="drv_BuckConverter_Resume">
+<area shape="rect" id="node1" title="This function resume the operation of the buck converter." alt="" coords="640,5,769,47"/>
+<area shape="rect" id="node2" href="$a00502.html#ga3c7bf6b771bc1296401a270da4a95bff" title="This function resumes the power supply operation." alt="" coords="417,13,592,39"/>
+<area shape="rect" id="node3" href="$a00466.html#ga8842f6a41fe23f932a8864fc140c4b5b" title="Application wide fault object monitoring routine." alt="" coords="199,13,369,39"/>
+<area shape="rect" id="node4" href="$a00354.html#ga8dc4b233e7fa6fe932be5e8d5a2b19e3" title="High priority task sequence executed at a fixed repetition frequency." alt="" coords="5,5,151,47"/>
+</map>
