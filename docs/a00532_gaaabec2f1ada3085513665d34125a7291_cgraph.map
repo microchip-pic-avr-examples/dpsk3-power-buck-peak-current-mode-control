@@ -1,0 +1,5 @@
+<map id="buckDAC_ModuleInitialize" name="buckDAC_ModuleInitialize">
+<area shape="rect" id="node1" title="This function initializes the Digital&#45;To&#45;Analog converter peripheral module." alt="" coords="5,31,179,57"/>
+<area shape="rect" id="node2" href="$a00381.html#gaddf7b491a947c7f557b89235588c0219" title="Writes a user&#45;defined configuration to the DAC module base registers." alt="" coords="227,5,423,32"/>
+<area shape="rect" id="node3" href="$a00381.html#ga72e7cdf4177d0403e8ff925314ec1bc7" title="Gets pointer to DAC Module SFR set." alt="" coords="229,56,420,83"/>
+</map>

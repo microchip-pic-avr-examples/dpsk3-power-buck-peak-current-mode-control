@@ -1,0 +1,5 @@
+<map id="Microcontroller Abstraction" name="Microcontroller Abstraction">
+<area shape="rect" id="node1" href="$a00421.html" title="Declaration of fundamental PCMC slope compensation comparator &amp; DAC parameters." alt="" coords="5,5,189,45"/>
+<area shape="rect" id="node3" title="PWM peripheral output pins, control signals and register assignments." alt="" coords="237,13,415,38"/>
+<area shape="rect" id="node2" href="$a00427.html" title="PWM peripheral output pins, control signals and register assignments used to drive the buck converter..." alt="" coords="463,13,573,38"/>
+</map>

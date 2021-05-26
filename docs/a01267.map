@@ -1,0 +1,4 @@
+<map id="NPNZ_LIMITS_s" name="NPNZ_LIMITS_s">
+<area shape="rect" id="node1" title="Data strucure holding control output clamping threshold values." alt="" coords="17,248,135,369"/>
+<area shape="rect" id="node2" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="5,5,147,200"/>
+</map>

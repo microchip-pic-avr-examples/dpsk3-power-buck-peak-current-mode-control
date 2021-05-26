@@ -1,0 +1,4 @@
+<map id="buckPWM_Resume" name="buckPWM_Resume">
+<area shape="rect" id="node1" title="This function resumes the buck PWM operation." alt="" coords="196,5,335,32"/>
+<area shape="rect" id="node2" href="$a00520.html#ga588a594f3e5f4a20cf955b9445887be1" title="This function ramps up the output voltage to its nominal regulation point." alt="" coords="5,5,148,32"/>
+</map>

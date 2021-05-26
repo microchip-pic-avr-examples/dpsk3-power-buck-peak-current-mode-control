@@ -1,0 +1,11 @@
+<map id="p33c_DacInstance_ConfigWrite" name="p33c_DacInstance_ConfigWrite">
+<area shape="rect" id="node1" title="Writes a user&#45;defined configuration to the DAC instance registers." alt="" coords="1431,31,1603,72"/>
+<area shape="rect" id="node2" href="$a00532.html#ga91be1e9c6cefeb362af454e71869d042" title="This function initializes the Digital&#45;To&#45;Analog converter, slope compensation and analog comparator u..." alt="" coords="1192,13,1371,39"/>
+<area shape="rect" id="node9" href="$a00381.html#ga460e4b439318c2f87879738ecb34fa8a" title="Read the current configuration from the DAC instance registers." alt="" coords="1180,63,1383,90"/>
+<area shape="rect" id="node3" href="$a00532.html#ga45a54def97cc67eb8d36e22a3867d95f" title="This function initializes the output pins for the PWM output and the default buck PWM settings." alt="" coords="948,13,1132,39"/>
+<area shape="rect" id="node4" href="$a00509.html#gaf3c64772d6dfd473d6924fb8893bd180" title="This function initializes all peripheral modules and their instances used by the power controller." alt="" coords="771,5,900,47"/>
+<area shape="rect" id="node5" href="$a00505.html#ga0b26acfec74d1804384b4ba1a3cffab4" title="This function is used to load peripheral configuration templates from the power controller device dri..." alt="" coords="532,5,723,47"/>
+<area shape="rect" id="node6" href="$a00502.html#ga7a4cf6371d09457539f96a74b2809ca0" title="Calls the application layer power controller initialization." alt="" coords="311,13,484,39"/>
+<area shape="rect" id="node7" href="$a00366.html#ga2be64f5f0b9a2c0c6713f5a69d793e05" title="Initializes the user&#45;defined tasks." alt="" coords="104,13,263,39"/>
+<area shape="rect" id="node8" href="$a00350.html#ga840291bc02cba5474a4cb46a9b9566fe" title="Application main function executed after device comes out of RESET." alt="" coords="5,13,56,39"/>
+</map>

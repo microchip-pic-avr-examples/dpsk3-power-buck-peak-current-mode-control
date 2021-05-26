@@ -562,7 +562,7 @@
                           ||||||||||||||| _ BIT  0: 
                           ||||||||||||||||  */
 #define REG_PGxIOCONL   0b0011000000000000
-#define REG_PGxIOCONLPC 0b0011000000010000
+#define REG_PGxIOCONLPC 0b0011000000000100
 
 /**
  * @def REG_PGxIOCONH
@@ -640,58 +640,6 @@
 #define REG_PGxEVTH     0b0000000101000000
 
 /**
- * @def REG_PGxCLPCIL
- * @brief PGxCLPCIL: PWM GENERATOR CURRENT LIMIT PCI REGISTER LOW
- */
-/* 
-
-                           ________________ BIT 15: TSYNCDIS: Termination Synchronization Disable
-                          | _______________ BIT 14: TERM[2:0]: Termination Event Selection
-                          || ______________ BIT 13: 
-                          ||| _____________ BIT 12: 
-                          |||| ____________ BIT 11: AQPS: Acceptance Qualifier Polarity Selection
-                          ||||| ___________ BIT 10: AQSS[2:0]: Acceptance Qualifier Source Selection
-                          |||||| __________ BIT  9: 
-                          ||||||| _________ BIT  8: 
-                          |||||||| ________ BIT  7: SWTERM: PCI Software Termination
-                          ||||||||| _______ BIT  6: PSYNC: PCI Synchronization Control
-                          |||||||||| ______ BIT  5: PPS: PCI Polarity Selection
-                          ||||||||||| _____ BIT  4: PSS[4:0]: PCI Source Selection
-                          |||||||||||| ____ BIT  3: 
-                          ||||||||||||| ___ BIT  2: 
-                          |||||||||||||| __ BIT  1: 
-                          ||||||||||||||| _ BIT  0:                
-                          ||||||||||||||||  */
-#define REG_PGxCLPCIL   0b0000000000000000    // Voltage and Average Current Mode Configuration
-#define REG_PGxCLPCILPC 0b0001000100000000    // Peak Current Mode Control Configuration (no source selected)
-
-/**
- * @def REG_PGxCLPCIH
- * @brief PGxCLPCIH: PWM GENERATOR CURRENT LIMIT PCI REGISTER HIGH
- */
-/* 
-
-                           ________________ BIT 15: BPEN: PCI Bypass Enable
-                          | _______________ BIT 14: BPSEL[2:0]: PCI Bypass Source Selection
-                          || ______________ BIT 13: 
-                          ||| _____________ BIT 12: 
-                          |||| ____________ BIT 11: (unimplemented)
-                          ||||| ___________ BIT 10: ACP[2:0]: PCI Acceptance Criteria Selection
-                          |||||| __________ BIT  9: 
-                          ||||||| _________ BIT  8: 
-                          |||||||| ________ BIT  7: SWPCI: Software PCI Control
-                          ||||||||| _______ BIT  6: SWPCIM[1:0]: Software PCI Control Mode
-                          |||||||||| ______ BIT  5: 
-                          ||||||||||| _____ BIT  4: LATMOD: PCI SR Latch Mode
-                          |||||||||||| ____ BIT  3: TQPS: Termination Qualifier Polarity Selection
-                          ||||||||||||| ___ BIT  2: TQSS[2:0]: Termination Qualifier Source Selection
-                          |||||||||||||| __ BIT  1: 
-                          ||||||||||||||| _ BIT  0: 
-                          ||||||||||||||||  */
-#define REG_PGxCLPCIH   0b0000000000000000  // Voltage and Average Current Mode Configuration
-#define REG_PGxCLPCIHPC 0b0000001100011001  // Peak Current Mode Control Configuration
-
-/**
  * @def REG_PGxFPCIL
  * @brief PGxFPCIL: PWM GENERATOR FAULT PCI REGISTER LOW
  */
@@ -742,6 +690,56 @@
 #define REG_PGxFPCIH    0b0000000000000000
 
 /**
+ * @def REG_PGxCLPCIL
+ * @brief PGxCLPCIL: PWM GENERATOR CURRENT LIMIT PCI REGISTER LOW
+ */
+/* 
+
+                           ________________ BIT 15: TSYNCDIS: Termination Synchronization Disable
+                          | _______________ BIT 14: TERM[2:0]: Termination Event Selection
+                          || ______________ BIT 13: 
+                          ||| _____________ BIT 12: 
+                          |||| ____________ BIT 11: AQPS: Acceptance Qualifier Polarity Selection
+                          ||||| ___________ BIT 10: AQSS[2:0]: Acceptance Qualifier Source Selection
+                          |||||| __________ BIT  9: 
+                          ||||||| _________ BIT  8: 
+                          |||||||| ________ BIT  7: SWTERM: PCI Software Termination
+                          ||||||||| _______ BIT  6: PSYNC: PCI Synchronization Control
+                          |||||||||| ______ BIT  5: PPS: PCI Polarity Selection
+                          ||||||||||| _____ BIT  4: PSS[4:0]: PCI Source Selection
+                          |||||||||||| ____ BIT  3: 
+                          ||||||||||||| ___ BIT  2: 
+                          |||||||||||||| __ BIT  1: 
+                          ||||||||||||||| _ BIT  0:                
+                          ||||||||||||||||  */
+#define REG_PGxCLPCIL   0b0000000000000000    // Voltage and Average Current Mode Configuration
+
+/**
+ * @def REG_PGxCLPCIH
+ * @brief PGxCLPCIH: PWM GENERATOR CURRENT LIMIT PCI REGISTER HIGH
+ */
+/* 
+
+                           ________________ BIT 15: BPEN: PCI Bypass Enable
+                          | _______________ BIT 14: BPSEL[2:0]: PCI Bypass Source Selection
+                          || ______________ BIT 13: 
+                          ||| _____________ BIT 12: 
+                          |||| ____________ BIT 11: (unimplemented)
+                          ||||| ___________ BIT 10: ACP[2:0]: PCI Acceptance Criteria Selection
+                          |||||| __________ BIT  9: 
+                          ||||||| _________ BIT  8: 
+                          |||||||| ________ BIT  7: SWPCI: Software PCI Control
+                          ||||||||| _______ BIT  6: SWPCIM[1:0]: Software PCI Control Mode
+                          |||||||||| ______ BIT  5: 
+                          ||||||||||| _____ BIT  4: LATMOD: PCI SR Latch Mode
+                          |||||||||||| ____ BIT  3: TQPS: Termination Qualifier Polarity Selection
+                          ||||||||||||| ___ BIT  2: TQSS[2:0]: Termination Qualifier Source Selection
+                          |||||||||||||| __ BIT  1: 
+                          ||||||||||||||| _ BIT  0: 
+                          ||||||||||||||||  */
+#define REG_PGxCLPCIH   0b0000000000000000  // Voltage and Average Current Mode Configuration
+
+/**
  * @def REG_PGxFFPCIL
  * @brief PGxFFPCIL: PWM GENERATOR FEED FORWARD PCI REGISTER LOW
  */
@@ -765,7 +763,10 @@
                           ||||||||||||||| _ BIT  0: 
                           ||||||||||||||||  */
 #define REG_PGxFFPCIL   0b0000000000000000
- 
+
+#define REG_PGxyPCILPC  0b0001000100000000  // Peak Current Mode Control Configuration (no PCI source selected)
+#define REG_PGxyPCIHPC  0b0000001100011001  // Peak Current Mode Control Configuration
+
 /**
  * @def REG_PGxFFPCIH
  * @brief PGxFFPCIH: PWM GENERATOR FEED FORWARD PCI REGISTER LOW

@@ -79,12 +79,12 @@ _buck_SyncRectControl:                      ; local function label (placeholder)
     ; Check turn-on threshold
     mov [w0 + #usrParam1], w6            ; load turn-on threshold value
     cpslt w4, w6                         ; compare turn-on threshold against most recent control output
-    bset [w3], #4                        ; set current limit low-side bit preventing sync rectifier PWM drive signal from being generated
+    bclr [w3], #12                       ; clear override low-side bit preventing sync rectifier PWM drive signal from being generated
 
     ; Check turn-off threshold
     mov [w0 + #usrParam2], w6            ; load turn-off threshold value
     cpsgt w4, w6                         ; compare turn-off threshold against most recent control output
-    bclr [w3], #4                        ; clear current limit low-side bit allowing sync rectifier PWM drive signal to be generated
+    bset [w3], #12                       ; set override low-side bit allowing sync rectifier PWM drive signal to be generated
 
     
     

@@ -1,0 +1,4 @@
+<map id="p33c_PwmGenerator_Dispose" name="p33c_PwmGenerator_Dispose">
+<area shape="rect" id="node1" title="Disposes a given PWM generator by resetting all its registers to default." alt="" coords="5,5,148,47"/>
+<area shape="rect" id="node2" href="$a00387.html#gab66f225bac6b132d1418a4c808e3babb" title="Disposes a given PWM generator by resetting all its registers to default." alt="" coords="196,5,339,47"/>
+</map>

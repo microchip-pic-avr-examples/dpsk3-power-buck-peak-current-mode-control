@@ -27,10 +27,13 @@
  **************************************************************************************************/
 volatile struct BUCK_CONVERTER_s buck;
 
-/* PRIVATE FUNCTION PROTOTYPES */
+/* PRIVATE EXTERNAL FUNCTION PROTOTYPES */
 extern volatile uint16_t appPowerSupply_ConverterObjectInitialize(void);
 extern volatile uint16_t appPowerSupply_ControllerInitialize(void);
 extern volatile uint16_t appPowerSupply_PeripheralsInitialize(void);
+
+/* PRIVATE INTERNAL FUNCTION PROTOTYPES */
+volatile uint16_t __attribute__((always_inline)) appPowerSupply_DataCapture(void);
 
 /* *************************************************************************************************
  * PRIVATE VARIABLE DECLARATIONS
@@ -64,27 +67,8 @@ volatile uint16_t appPowerSupply_Execute(void)
 { 
     volatile uint16_t retval=1;
 
-    // Capture data values
-    buck.data.v_in = (BUCK_VIN_ADCBUF - BUCK_VIN_OFFSET);
-    buck.data.temp = TEMP_ADCBUF;
-    buck.data.i_sns[0] = BUCK_ISNS_ADCBUF;
-    if (buck.data.control_output < 210)
-        buck.data.i_sns[0] = buck.data.control_output;
-    else
-        buck.data.i_sns[0] = (buck.data.control_output - 210);
-
-    // Average inductor current value
-    isns_samples += buck.data.i_sns[0];
-    if(!(++_isns_sample_count & ISNS_AVG_BITMASK))
-    {
-        isns_samples = (isns_samples >> 3);
-        isns_samples -= buck.i_loop[0].feedback_offset;
-        if((int16_t)isns_samples < 0) isns_samples = 0;
-
-        buck.data.i_out = isns_samples;
-        
-        isns_samples = 0; // Reset data buffer
-    }
+    // Capture data values, which are not captured by the controller automatically
+    retval = appPowerSupply_DataCapture();
     
     // Execute buck converter state machine
     retval &= drv_BuckConverter_Execute(&buck);
@@ -247,6 +231,61 @@ volatile uint16_t appPowerSupply_Resume(void)
  * PRIVATE FUNCTIONS
  * ************************************************************************************************/
 
- // (none)
+/*********************************************************************************
+ * @ingroup app-layer-power-control-functions-private
+ * @fn      volatile uint16_t appPowerSupply_DataCapture(void)
+ * @brief   Captures runtime data not captured automatically by other firmware modules
+ * @return  unsigned integer (0=failure, 1=success)
+ * @details
+ *  Function appPowerSupply_DataCapture is used to capture runtime data from
+ *  ADC inputs which are not used for direct control of the power supply but
+ *  are required for fault management, system monitoring and/or communication. 
+ *
+ * @note
+ *  In peak current mode control the inductor current triggers a hardware 
+ *  comparator truncating the duty cycle asynchronously from the CPU time-base.
+ *  This makes it impossible to track the average current using a ADC. Hence, 
+ *  an alternative way is chosen to track the converter output current by 
+ *  monitoring the peak current set by the feedback loop instead. A simple 
+ *  offset correction is used to estimate the average current by subtracting 
+ *  half of the inductor ripple current from the peak current value.
+ * 
+ * This method is not precise and refers to the nominal ripple current at
+ * specific input and output voltage. An improved implementation requires 
+ * continuous monitoring of VIN and VOUT and the calculation of the current 
+ * slew rate in each condition together with the most recent on-time. In 
+ * this implementation, however, the simple estimation was considered 
+ * 'good enough' to output the inductor current value on the LC display 
+ * of the board.  
+ * 
+ **********************************************************************************/
+
+volatile uint16_t appPowerSupply_DataCapture(void) 
+{
+    volatile uint16_t retval=0;
+
+    buck.data.v_in = (BUCK_VIN_ADCBUF - BUCK_VIN_OFFSET);
+    buck.data.temp = TEMP_ADCBUF;
+    buck.data.i_sns[0] = BUCK_ISNS_ADCBUF;
+    if (buck.data.control_output < 210)
+        buck.data.i_sns[0] = buck.data.control_output;
+    else
+        buck.data.i_sns[0] = (buck.data.control_output - 210);
+
+    // Average inductor current value
+    isns_samples += buck.data.i_sns[0];
+    if(!(++_isns_sample_count & ISNS_AVG_BITMASK))
+    {
+        isns_samples = (isns_samples >> 3);
+        isns_samples -= buck.i_loop[0].feedback_offset;
+        if((int16_t)isns_samples < 0) isns_samples = 0;
+
+        buck.data.i_out = isns_samples;
+        
+        isns_samples = 0; // Reset data buffer
+    }
+    
+    return(retval); 
+}
 
 // end of file

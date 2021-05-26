@@ -1,0 +1,4 @@
+<map id="NPNZ_STATUS_s" name="NPNZ_STATUS_s">
+<area shape="rect" id="node1" title="Controller status word data structure allowing bit&#45;wise access to status and control bits." alt="" coords="5,248,172,472"/>
+<area shape="rect" id="node2" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="18,5,159,200"/>
+</map>

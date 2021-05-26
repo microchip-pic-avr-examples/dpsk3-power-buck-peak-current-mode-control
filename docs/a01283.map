@@ -1,0 +1,4 @@
+<map id="NPNZ_GAIN_CONTROL_s" name="NPNZ_GAIN_CONTROL_s">
+<area shape="rect" id="node1" title="Data structure holding parameters required for adaptive or manual loop gain manipulation during runti..." alt="" coords="5,248,181,369"/>
+<area shape="rect" id="node2" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="23,5,164,200"/>
+</map>

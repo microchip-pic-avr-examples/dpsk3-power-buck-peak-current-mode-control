@@ -1,0 +1,13 @@
+<map id="NPNZ_LIMITS_s" name="NPNZ_LIMITS_s">
+<area shape="rect" id="node1" title="Data strucure holding control output clamping threshold values." alt="" coords="757,5,874,127"/>
+<area shape="rect" id="node2" href="$a01292.html" title="Generic NPNZ16b Controller Object. This data structure is the main API data object providing single&#45;p..." alt="" coords="770,189,861,267"/>
+<area shape="rect" id="node3" href="$a01272.html" title="Automatic ADC trigger placement parameters for primary ADC trigger A and secondary trigger B." alt="" coords="5,425,177,546"/>
+<area shape="rect" id="node4" href="$a01284.html" title="Data structure holding parameters required for adaptive or manual loop gain manipulation during runti..." alt="" coords="202,425,378,546"/>
+<area shape="rect" id="node5" href="$a01288.html" title="Generic data buffer for undetermined use. These data buffers may be used by advanced control algorith..." alt="" coords="402,395,615,575"/>
+<area shape="rect" id="node6" href="$a01260.html" title="Data structure merging all defined controller input and output ports." alt="" coords="640,447,788,524"/>
+<area shape="rect" id="node8" href="$a01264.html" title="Data structure for filter parameters such as pointer to history and coefficient arrays and number sca..." alt="" coords="812,351,995,619"/>
+<area shape="rect" id="node9" href="$a01276.html" title="Automated data provider pointers used to push most recent data points to user&#45;defined variables." alt="" coords="1019,425,1251,546"/>
+<area shape="rect" id="node10" href="$a01280.html" title="Set of function pointers and parameters used to tie in user&#45;defined, external extension functions at ..." alt="" coords="1275,329,1497,641"/>
+<area shape="rect" id="node11" href="$a01244.html" title="Controller status word data structure allowing bit&#45;wise access to status and control bits." alt="" coords="1521,373,1688,597"/>
+<area shape="rect" id="node7" href="$a01256.html" title="Data structure defining parameters of a controller input or output port." alt="" coords="657,748,769,869"/>
+</map>

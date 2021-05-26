@@ -1,0 +1,13 @@
+<map id="p33c_DacModule_GetHandle" name="p33c_DacModule_GetHandle">
+<area shape="rect" id="node1" title="Gets pointer to DAC Module SFR set." alt="" coords="1401,63,1592,90"/>
+<area shape="rect" id="node2" href="$a00532.html#gaaabec2f1ada3085513665d34125a7291" title="This function initializes the Digital&#45;To&#45;Analog converter peripheral module." alt="" coords="1180,13,1353,39"/>
+<area shape="rect" id="node9" href="$a00362.html#gab420e63336f317e197b1cb8861561c3f" title="DAC Module Base Register Initialization." alt="" coords="1185,63,1348,90"/>
+<area shape="rect" id="node11" href="$a00362.html#ga2f97c3082e0d6f724cea482c10c2d08f" title=" " alt="" coords="1191,114,1343,141"/>
+<area shape="rect" id="node3" href="$a00532.html#ga45a54def97cc67eb8d36e22a3867d95f" title="This function initializes the output pins for the PWM output and the default buck PWM settings." alt="" coords="948,13,1132,39"/>
+<area shape="rect" id="node4" href="$a00509.html#gaf3c64772d6dfd473d6924fb8893bd180" title="This function initializes all peripheral modules and their instances used by the power controller." alt="" coords="771,5,900,47"/>
+<area shape="rect" id="node5" href="$a00505.html#ga0b26acfec74d1804384b4ba1a3cffab4" title="This function is used to load peripheral configuration templates from the power controller device dri..." alt="" coords="532,5,723,47"/>
+<area shape="rect" id="node6" href="$a00502.html#ga7a4cf6371d09457539f96a74b2809ca0" title="Calls the application layer power controller initialization." alt="" coords="311,17,484,43"/>
+<area shape="rect" id="node7" href="$a00366.html#ga2be64f5f0b9a2c0c6713f5a69d793e05" title="Initializes the user&#45;defined tasks." alt="" coords="104,21,263,47"/>
+<area shape="rect" id="node8" href="$a00350.html#ga840291bc02cba5474a4cb46a9b9566fe" title="Application main function executed after device comes out of RESET." alt="" coords="5,46,56,73"/>
+<area shape="rect" id="node10" href="$a00361.html#ga70c5cba054e38a4e8c8285a187ff61fa" title="Initializes the user&#45;defined chip resources." alt="" coords="973,64,1107,105"/>
+</map>
