@@ -71,7 +71,6 @@ STRIP_FROM_PATH     = ../../../
 #	 This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
 
 PREDEFINED          += __attribute__(x)=
-PREDEFINED			+= __DPSK3_R30__
 
 # 4) File extensions of file types which should be included in the documentation 
 #    in addition to the common file types of embedded C programs. Predefined
